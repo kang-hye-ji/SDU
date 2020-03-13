@@ -1,0 +1,59 @@
+body{
+    width:100%;
+}
+
+header{
+    width:100%; height:120px; position:fixed; top:0; z-index:100;
+    background:blue;
+}
+
+header .infoMenu{
+    width:360px; position:fixed; top:0; right:0;
+}
+header .infoMenu>li{
+    float:left;
+}
+header .infoMenu>li>a{
+    display:block; width:90px; height:90px; line-height:90px; text-align:center; 
+    color:#fff; text-decoration:none; font-size:13px; font-weight:600;
+}
+header .infoMenu>li:nth-child(1)>a{
+    background:#977649;
+}
+header .infoMenu>li:nth-child(2)>a{
+    background:#f38d0d;
+}
+header .infoMenu>li:nth-child(3)>a{
+    background:#032a58;
+}
+header .infoMenu>li:nth-child(4)>a{
+    background:#5e6e88;
+}
+
+header .mainBar{
+    width:calc(100% - 360px); position:fixed; top:0; left:0;
+}
+
+header .mainBar .logo{
+    position:absolute; top:30px; left:160px;
+}
+
+nav{
+}
+nav .gnb{
+    margin-top:43px; padding:0 25px 0 220px; text-align:center;
+}
+nav .gnb>li{
+    display:inline-block; margin-right:60px;
+}
+nav .gnb>li:last-child{
+    margin:0;
+}
+nav .gnb>li>a{
+    display:block;
+    font-size:20px; text-decoration:none; color:#fff; font-weight:600;
+}
+
+header .siteMenu{
+    position:absolute; top:40px; right:25px;
+}
