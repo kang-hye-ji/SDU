@@ -18,7 +18,9 @@ nav .gnbSub, footer{
 
 .m_visual{
     position:relative;
+    opacity:0;
 }
+
 .m_visualSl_cont1>a, .m_visualSl_cont2>a, .m_visualSl_cont3>a, .m_visualSl_cont4>a{
     display:block; width:calc(100% - 162px); height:680px; padding:150px 0 0 162px;
     text-decoration:none; color:#fff;
@@ -104,31 +106,62 @@ article.m_visual .m_visualSl_cont1>a strong{
     display:none;
 }
 .m_notice{
-    margin-top:90px; position:relative;
+    margin-top:90px; position:relative; opacity:0;
 }
 .m_notice>h2{
     font-size:44px; font-family:'Oswald', sans-serif; font-weight:500;
 }
 
 .m_notice>ul{
-    /* background:red; */ position:absolute; top:0; margin:7px 0 0 568px;
+    position:absolute; top:0; margin:7px 0 0 568px;
 }
 .m_notice>ul>li{
     display:inline-block;
 }
-.m_notice>ul>li:first-child{
-}
 .m_notice>ul>li>a:first-child{
+    margin-right:53px; position:relative;
     text-decoration:none; color:#8d8d8d; font-size:22px; font-weight:700;
 }
-.m_notice>ul>li>.m_notice_contSub{
-    position:absolute; top:85px; margin-left:-568px;
+.m_notice>ul>li:last-child>a:first-child{
+    margin:0;
 }
-
-/* tab메뉴 jquery 짜기 */
-.m_notice>ul>li:first-child>a:first-child{
+.m_notice>ul>li>a:first-child:after{
+    content:''; display:block; width:6px; height:6px; position:absolute; top:calc(50% - 3px); right:-29.5px;
+    background:#000; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;
+}
+.m_notice>ul>li:last-child>a:first-child:after{
+    display:none;
+}
+.m_notice>ul>li>.m_notice_contSub{
+    display:none; position:absolute; top:85px; left:-568px; width:1500px;
+}
+.m_notice>ul>li>a.onN{
     color:#977749;
 }
-.m_notice>ul>li:first-child>.m_notice_contSub{
-    display:block;
+
+.m_notice .m_notice_contSub>li{
+    display:inline-block; width:320px; margin-right:40px;
+}
+.m_notice .m_notice_contSub>li:last-child{
+    margin:0;
+}
+.m_notice .m_notice_contSub>li>a{
+    width:100%;
+    text-decoration:none; color:#000;
+}
+.m_notice .m_notice_contSub>li>a>h3{
+    height:75px; overflow:hidden; margin-bottom:42px;
+    font-size:28px; line-height:40px;
+}
+.m_notice .m_notice_contSub>li>a>span{
+    line-height:28px; display:block; height:50px; overflow:hidden;
+}
+.m_notice .m_notice_contSub>li>a>p{
+    margin-top:29px;
+    color:#9498a8;
+}
+
+.m_notice .moreBt{
+    display:none; width:30px; height:30px; position:absolute; top:3px; right:-350px;
+    background:url('../img/main/btn_plus_gray.png') no-repeat; text-decoration:none;
 }

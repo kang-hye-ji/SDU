@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- http://gsgd.co.uk/sandbox/jquery/easing/ -->
     <script src="js/slick.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -557,7 +559,7 @@
                     <h2>NOTICE & NEWS</h2>
                     <ul>
                         <li>
-                            <a href="#" target="_self" title="">학사공지</a>
+                            <a class="m_notice_contSub_tit" href="#" target="_self" title="">학사공지</a>
                             <ol class="m_notice_contSub">
                                 <li>
                                     <a href="#" target="_self" title="상세이동">
@@ -588,10 +590,10 @@
                                     </a>
                                 </li>
                             </ol>
-                            <a class="moreBt" href="#" target="_self" title="학사공지 전체보기">+</a>
+                            <a class="moreBt" href="#" target="_self" title="학사공지 전체보기"></a>
                         </li>
                         <li>
-                            <a href="#" target="_self" title="">공지사항</a>
+                            <a class="m_notice_contSub_tit" href="#" target="_self" title="">공지사항</a>
                             <ol class="m_notice_contSub">
                                 <li>
                                     <a href="#" target="_self" title="상세이동">
@@ -622,10 +624,10 @@
                                     </a>
                                 </li>
                             </ol>
-                            <a class="moreBt" href="#" target="_self" title="공지사항 전체보기">+</a>
+                            <a class="moreBt" href="#" target="_self" title="공지사항 전체보기"></a>
                         </li>
                         <li>
-                            <a href="#" target="_self" title="">보도기사</a>
+                            <a class="m_notice_contSub_tit" href="#" target="_self" title="">보도기사</a>
                             <ol class="m_notice_contSub">
                                 <li>
                                     <a href="#" target="_self" title="상세이동">
@@ -656,10 +658,10 @@
                                     </a>
                                 </li>
                             </ol>
-                            <a class="moreBt" href="#" target="_self" title="보도기사 전체보기">+</a>
+                            <a class="moreBt" href="#" target="_self" title="보도기사 전체보기"></a>
                         </li>
                         <li>
-                            <a href="#" target="_self" title="">학과소식</a>
+                            <a class="m_notice_contSub_tit" href="#" target="_self" title="">학과소식</a>
                             <ol class="m_notice_contSub">
                                 <li>
                                     <a href="#" target="_self" title="상세이동">
@@ -690,7 +692,7 @@
                                     </a>
                                 </li>
                             </ol>
-                            <a class="moreBt" href="#" target="_self" title="학과소식 전체보기">+</a>
+                            <a class="moreBt" href="#" target="_self" title="학과소식 전체보기"></a>
                         </li>
                     </ul>
                 </article>
@@ -917,7 +919,7 @@
                         <a href="#" target="_self" title="">
                             <h3>최고 품질의 수업 콘텐츠 제공</h3>
                             <p>SDU Media Center</p>
-                            <span>교육과 방송 융합 콘텐츠를 제작할 수 있는 최첨단 스튜디오를 갖춘 미디어센터에서 고품질 수업 콘텐츠를 제작·제공합니다.</span>
+                            <span>교육과 방송 융합 콘텐츠를 제작할 수 있는 최첨단 스튜디오를 갖춘 미디어센터에서 고품질 수업 콘텐��를 제작·제공합니다.</span>
                             <img src="#" alt="VR 수업 이미지"/>
                         </a>
                     </div>
@@ -1287,11 +1289,13 @@
     </footer>
     <script type="text/javascript">
         $(document).ready(function(){
+            //visual
             $('.m_visualSl').slick({
                 arrows:false,
                 dots:true,
                 autoplay:true,
-                pauseOnHover:false
+                pauseOnHover:false,
+                pauseOnFocus:false
             });
             //visual slick button 설정
             $('.m_visual .slick-dots #slick-slide00').find('>button').text('01');
@@ -1309,14 +1313,39 @@
                 }
             })
 
-            //notice&news tab메뉴
-            $('.m_notice>ul>li>a').eq(0).on('click',function(){
-                if($(this).hasClass('onN')){
+            $('.m_visual').animate({'opacity':'1'},700,'easeOutQuad')
 
-                }else{
+            $(window).scroll(function(){
+                $('.m_notice').each(function(i){
+                    var window_bottom=$(window).scrollTop()+$(window).height();
+                    var notice_bottom=$(this).offset().top+$(this).outerHeight();
                     
-                }
+                    if(window_bottom>notice_bottom/3){
+                        $(this).animate({
+                            'opacity':'1'
+                        },500)
+                    }
+                })
             })
+
+
+            //notice
+            $('.m_notice_contSub_tit').click(function(){
+                return false;
+            })
+            $('.m_notice>ul>li').eq(0).find('>a').eq(0).addClass('onN');
+            $('.m_notice>ul>li').eq(0).find('>a').eq(0).next().show();
+            $('.m_notice>ul>li').eq(0).find('.moreBt').show();
+            /* web3_jq_9(tab메뉴) / jquery2(가로탭메뉴) 참고 */
+            //notice&news tab메뉴
+            $('.m_notice .m_notice_contSub_tit').on('click',function(){
+                    $(this).parents().siblings().find('.m_notice_contSub_tit').removeClass('onN');
+                    $(this).parents().siblings().find('.m_notice_contSub').hide();
+                    $(this).parents().siblings().find('.moreBt').hide();
+                    $(this).next().show();
+                    $(this).addClass('onN');
+                    $(this).parents().find('>.moreBt').show();
+            });
         })
     </script>
 </body>
