@@ -18,8 +18,18 @@ nav .gnbSub, footer{
 
 .m_visual{
     position:relative;
-    opacity:0;
+    opacity:0; transform:translate(5px, -10px); -ms-transform:translate(5px, -10px); -webkit-transform:translate(5px, -10px);
+    animation:ani_visual 0.5s ease-in-out 0.5s both;
 }
+-webkit-@keyframes ani_visual{
+    from{opacity:0; transform:translate(5px, -10px); -ms-transform:translate(5px, -10px); -webkit-transform:translate(5px, -10px);}
+    to{opacity:1; transform:translate(0); -ms-transform:translate(0); -webkit-transform:translate(0);}
+}
+@keyframes ani_visual{
+    from{opacity:0; transform:translate(5px, -10px); -ms-transform:translate(5px, -10px); -webkit-transform:translate(5px, -10px);}
+    to{opacity:1; transform:translate(0); -ms-transform:translate(0); -webkit-transform:translate(0);}
+}
+
 
 .m_visualSl_cont1>a, .m_visualSl_cont2>a, .m_visualSl_cont3>a, .m_visualSl_cont4>a{
     display:block; width:calc(100% - 162px); height:680px; padding:150px 0 0 162px;
@@ -38,26 +48,53 @@ nav .gnbSub, footer{
     background:url('../img/main/m_visualSl_cont4_bg.jpg') no-repeat;
 }
 .m_visualSl_cont1>a h2, .m_visualSl_cont2>a h2, .m_visualSl_cont3>a h2, .m_visualSl_cont4>a h2{
+    opacity:0; margin-left:27px;
     font-size:60px; letter-spacing:-4px; line-height:75px;
 }
 article.m_visual .m_visualSl_cont1>a strong{
-    display:block;
+    display:block; opacity:0; margin-left:27px;
     color:#ebda11; font-size:60px; letter-spacing:-4px;
 }
 .m_visualSl_cont1>a span, .m_visualSl_cont2>a span, .m_visualSl_cont3>a span, .m_visualSl_cont4>a span{
-    display:block; margin-top:73px; line-height:32px;
+    display:block; margin-top:73px; margin-left:27px; line-height:32px; opacity:0;
     font-size:21px;
 }
 
+.m_visual .slick-slide.slick-active a h2, .m_visual .slick-slide.slick-active a strong{
+    animation:ani_visualT1 0.5s ease 0.5s both;
+}
+.m_visual .slick-slide.slick-active a span{
+    animation:ani_visualT1 0.5s ease 0.8s both;
+}
+-webkit-@keyframes ani_visualT1{
+    from{opacity:0; margin-left:27px;}
+    to{opacity:1; margin-left:0;}
+}
+@keyframes ani_visualT1{
+    from{opacity:0; margin-left:27px;}
+    to{opacity:1; margin-left:0;}
+}
+-webkit-@keyframes ani_visualT2{
+    from{opacity:0; margin-left:27px;}
+    to{opacity:1; margin-left:0;}
+}
+@keyframes ani_visualT2{
+    from{opacity:0; margin-left:27px;}
+    to{opacity:1; margin-left:0;}
+}
+
 .m_visual .pauseBt{
-    width:8px; height:12px; position:absolute; bottom:224px; left:162px; z-index:10; overflow:visible;
+    width:8px; height:12px; position:absolute; bottom:225px; left:162px; z-index:10; overflow:visible;
     background:url('../img/main/btn_pause.png') no-repeat;
 }
 .m_visual .pauseBt.pause{
     background:url('../img/main/btn_play.png') no-repeat;
 }
 .m_visual .slick-dots{
-    *zoom:1; position:absolute; bottom:218px; left:190px;
+    *zoom:1; position:absolute; bottom:218px; opacity:0; left:220px;/* left:190px; */
+}
+.m_visual .slick-dots.ani_visualBt{
+    animation:ani_visualBt 0.5s ease 0.9s both;
 }
 .m_visual .slick-dots:after{
     content:''; display:table; clear:both;
@@ -81,12 +118,23 @@ article.m_visual .m_visualSl_cont1>a strong{
     border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;
 }
 
+-webkit-@keyframes ani_visualBt{
+    from{opacity:0; left:217px;}
+    to{opacity:1; left:190px;}
+}
+@keyframes ani_visualBt{
+    from{opacity:0; left:217px;}
+    to{opacity:1; left:190px;}
+}
+
 
 .QNWrap{
     padding:60px 0 87px 160px; height:487px;
 }
 
+
 .m_quickMenu>ul{
+    width:1470px;
 }
 .m_quickMenu>ul>li{
     display:inline-block; margin-right:80px;
@@ -106,14 +154,14 @@ article.m_visual .m_visualSl_cont1>a strong{
     display:none;
 }
 .m_notice{
-    margin-top:90px; position:relative; opacity:0;
+    margin-top:90px; position:relative;
 }
 .m_notice>h2{
     font-size:44px; font-family:'Oswald', sans-serif; font-weight:500;
 }
 
 .m_notice>ul{
-    position:absolute; top:0; margin:7px 0 0 568px;
+    position:absolute; top:0; margin:7px 0 0 568px; width:525px;
 }
 .m_notice>ul>li{
     display:inline-block;
@@ -150,18 +198,63 @@ article.m_visual .m_visualSl_cont1>a strong{
     text-decoration:none; color:#000;
 }
 .m_notice .m_notice_contSub>li>a>h3{
-    height:75px; overflow:hidden; margin-bottom:42px;
-    font-size:28px; line-height:40px;
+    height:75px; overflow:hidden; margin-bottom:42px; transform:translateY(40px); -ms-transform:translateY(40px); -webkit-transform:translateY(40px);
+    opacity:0; font-size:28px; line-height:40px;
+}
+.m_notice .m_notice_contSub>li>a>h3.ani_noticeT{
+    animation:ani_noticeT 0.3s ease 0s both;
 }
 .m_notice .m_notice_contSub>li>a>span{
-    line-height:28px; display:block; height:50px; overflow:hidden;
+    opacity:0; line-height:28px; display:block; height:50px; overflow:hidden; transform:translateY(40px); -ms-transform:translateY(40px); -webkit-transform:translateY(40px);
+}
+.m_notice .m_notice_contSub>li>a>span.ani_noticeT{
+    animation:ani_noticeT 0.3s ease 0.1s both;
 }
 .m_notice .m_notice_contSub>li>a>p{
     margin-top:29px;
     color:#9498a8;
 }
 
+-webkit-@keyframes ani_noticeT{
+    from{opacity:0; transform:translateY(40px); -webkit-transform:translateY(40px); -ms-transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0); -webkit-transform:translateY(0); -ms-transform:translateY(0);}
+}
+@keyframes ani_noticeT{
+    from{opacity:0; transform:translateY(40px); -webkit-transform:translateY(40px); -ms-transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0); -webkit-transform:translateY(0); -ms-transform:translateY(0);}
+}
+
 .m_notice .moreBt{
     display:none; width:30px; height:30px; position:absolute; top:3px; right:-350px;
     background:url('../img/main/btn_plus_gray.png') no-repeat; text-decoration:none;
 }
+
+
+.m_calender{
+    height:260px; width:100%; margin-top:87px;
+    background:url('../img/main/m_calender_bg.png') no-repeat #000f20 right bottom 100%;
+}
+.m_calender>div{
+    display:inline-block; margin:78px 0 0 162px;
+}
+.m_calender>div>span{
+    line-height:47px; position:relative;
+    font-size:40px; color:#fff;
+}
+.m_calender>div>span:after{
+    content:''; display:block; width:150px; height:1px; position:absolute; bottom:25px; left:168px;
+    background:#fff;
+}
+.m_calender>div>h2{
+    font-size:50px; color:#fff;
+}
+
+.m_calender>ul{
+    width:1055px; display:inline-block; margin-left:219px;
+}
+.m_calender>ul h3{
+    font-size:33px; color:#fff;
+}
+
+/* width문제,, min-width로 하면 축소시 왼쪽으로 붙음. 
+max-width로 하면 축소 시 스크롤 옆쪽이 빈다. */

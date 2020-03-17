@@ -38,10 +38,9 @@ header .mainBar .logo{
     position:absolute; top:30px; left:160px;
 }
 
-nav{
-}
+
 nav .gnb{
-    margin-top:43px; padding:0 25px 0 220px; text-align:center;
+    margin:43px auto 0; padding:0 25px 0 220px; width:1000px;
 }
 nav .gnb>li{
     display:inline-block; margin-right:60px;

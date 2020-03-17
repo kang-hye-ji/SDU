@@ -1290,13 +1290,13 @@
     <script type="text/javascript">
         $(document).ready(function(){
             //visual
-            $('.m_visualSl').slick({
-                arrows:false,
-                dots:true,
-                autoplay:true,
-                pauseOnHover:false,
-                pauseOnFocus:false
-            });
+            var m_visualSl=$('.m_visualSl').slick({
+                                arrows:false,
+                                dots:true,
+                                autoplay:true,
+                                pauseOnHover:false,
+                                pauseOnFocus:false
+                            });
             //visual slick button 설정
             $('.m_visual .slick-dots #slick-slide00').find('>button').text('01');
             $('.m_visual .slick-dots #slick-slide01').find('>button').text('02');
@@ -1312,32 +1312,35 @@
                     $('.m_visualSl').slick('slickPause');
                 }
             })
-
-            $('.m_visual').animate({'opacity':'1'},700,'easeOutQuad')
-
-            $(window).scroll(function(){
-                $('.m_notice').each(function(i){
-                    var window_bottom=$(window).scrollTop()+$(window).height();
-                    var notice_bottom=$(this).offset().top+$(this).outerHeight();
-                    
-                    if(window_bottom>notice_bottom/3){
-                        $(this).animate({
-                            'opacity':'1'
-                        },500)
-                    }
-                })
+            //visual animation
+            $('.m_visualSl').on('afterChange',function(event, slick, currentSlide, nextSlide){
+                /* console.log(slick); */
+                $('.m_visual .slick-dots').addClass('ani_visualBt');
+            })
+            $('.m_visualSl').on('beforeChange',function(event, slick, currentSlide, nextSlide){
+                /* console.log(slick); */
+                $('.m_visual .slick-dots').removeClass('ani_visualBt');
             })
 
 
-            //notice
+            //notice scroll animation
+            $(window).scroll(function(){
+                $('.m_notice_contSub').each(function(i){
+                    var window_bottom=$(window).scrollTop()+$(window).height();
+                    var notice_contSub_bottom=$(this).offset().top+$(this).outerHeight();
+                    if(window_bottom>(notice_contSub_bottom)){
+                        $(this).find('>li>a>h3').addClass('ani_noticeT');
+                        $(this).find('>li>a>span').addClass('ani_noticeT');
+                    }
+                })
+            })
+            //notice tab
             $('.m_notice_contSub_tit').click(function(){
                 return false;
             })
             $('.m_notice>ul>li').eq(0).find('>a').eq(0).addClass('onN');
             $('.m_notice>ul>li').eq(0).find('>a').eq(0).next().show();
             $('.m_notice>ul>li').eq(0).find('.moreBt').show();
-            /* web3_jq_9(tab메뉴) / jquery2(가로탭메뉴) 참고 */
-            //notice&news tab메뉴
             $('.m_notice .m_notice_contSub_tit').on('click',function(){
                     $(this).parents().siblings().find('.m_notice_contSub_tit').removeClass('onN');
                     $(this).parents().siblings().find('.m_notice_contSub').hide();
@@ -1346,6 +1349,12 @@
                     $(this).addClass('onN');
                     $(this).parents().find('>.moreBt').show();
             });
+
+            //calender
+            $('.m_calender>ul').slick({
+                arrows:false,
+                dots:false
+            })
         })
     </script>
 </body>
