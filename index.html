@@ -1020,10 +1020,14 @@
             </article>
             <article class="m_explore">
                 <h2>EXPLORE SDU</h2>
+                <div class="m_explore_paging">
+                    <p class="currentPage"></p>
+                    <p class="totalPage"></p>
+                </div>
                 <ul class="m_explore_cont">
                     <li>
                         <button type="button">일반학과</button>
-                        <div class="m_exploreSl_1">
+                        <div class="m_exploreSl m_exploreSl_1">
                             <div class="m_exploreSl_1-1">
                                 <a target="_self" title="" href="#">
                                     <p>경상학부</p>
@@ -1088,7 +1092,7 @@
                     </li>
                     <li>
                         <button type="button">융합과정</button>
-                        <div class="m_exploreSl_2">
+                        <div class="m_exploreSl m_exploreSl_2">
                             <div class="m_exploreSl_2-1">
                                 <a target="_self" title="" href="#">
                                     <p>4차산업혁명융합과정</p>
@@ -1139,138 +1143,135 @@
     </div>
     <footer>
         <article class="f_go">
-            <ul>
-                <!-- 아래 li 100%, click시 컬러 -->
+            <ul class="f_go_btn">
                 <li>
-                    <!-- 아래 button 사이즈 잡고 margin auto -->
-                    <button type="button">학과 바로가기<span>+</span><span>-</span></button>
-                    <div class="f_go_cont1">
-                        <!-- 아래 ul 사이즈 잡기, margin auto -->
-                        <ul>
-                            <li>
-                                <h2>인문사회계열</h2>
-                                <ol>
-                                    <li>
-                                        <span>경상학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">경영학과</a></li>
-                                            <li><a href="#" target="_self" title="">세무회계학과</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>법무경찰학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">법무행정학과</a></li>
-                                            <li><a href="#" target="_self" title="">경찰학과</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>부동산학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">부동산학과</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>상담심리학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">상담심리학과</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>사회복지학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">사회복지학과</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>국제분야</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">영어학과</a></li>
-                                            <li><a href="#" target="_self" title="">중국어학과</a></li>
-                                            <li><a href="#" target="_self" title="">일본학과</a></li>
-                                        </ol>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <h2>IT 및 문화예술계열</h2>
-                                <ol>
-                                    <li>
-                                        <span>IT공학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">전기전자공학과</a></li>
-                                            <li><a href="#" target="_self" title="">컴퓨터공학과</a></li>
-                                            <li><a href="#" target="_self" title="">소프트웨어공학과</a></li>
-                                            <li><a href="#" target="_self" title="">기계공학과(신설)</a></li>
-                                            <li><a href="#" target="_self" title="">소방방재학과(신설)</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>디자인학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">디자인학과(구.시각디자인전공</a></li>
-                                        </ol>
-                                    </li>
-                                    <li>
-                                        <span>문화예술학부</span>
-                                        <ol>
-                                            <li><a href="#" target="_self" title="">문화예술경영학과</a></li>
-                                            <li><a href="#" target="_self" title="">문예창작과</a></li>
-                                            <li><a href="#" target="_self" title="">미디어영상학과</a></li>
-                                            <li><a href="#" target="_self" title="">회화과</a></li>
-                                            <li><a href="#" target="_self" title="">실용음악학과</a></li>
-                                            <li><a href="#" target="_self" title="">패션학과</a></li>
-                                        </ol>
-                                    </li>
-                                </ol>
-                            </li>
-                        </ul>
-                    </div>
+                    <button class="f_go_btn1" type="button">학과 바로가기</button>
                 </li>
                 <li>
-                    <button type="button">국내 주요 사이트 바로가기<span>+</span><span>-</span></button>
-                    <div class="f_go_cont2">
-                        <ul>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>평생교육원</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>연합대학</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>디지털도서관</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>심리상담센터</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>사회공헌</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="">
-                                    <p></p>
-                                    <span>미술상</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <button class="f_go_btn2" type="button">교내 주요 사이트 바로가기</button>
                 </li>
             </ul>
+            <div class="f_go_cont1 f_go_cont">
+                <ul>
+                    <li>
+                        <h2>인문사회계열</h2>
+                        <ol class="f_cont1_list f_cont1_list-1">
+                            <li>
+                                <span>경상학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">경영학과</a></li>
+                                    <li><a href="#" target="_self" title="">세무회계학과</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>법무경찰학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">법무행정학과</a></li>
+                                    <li><a href="#" target="_self" title="">경찰학과</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>부동산학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">부동산학과</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>상담심리학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">상담심리학과</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>사회복지학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">사회복지학과</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>국제분야</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">영어학과</a></li>
+                                    <li><a href="#" target="_self" title="">중국어학과</a></li>
+                                    <li><a href="#" target="_self" title="">일본학과</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>IT 및 문화예술계열</h2>
+                        <ol class="f_cont1_list f_cont1_list-2">
+                            <li>
+                                <span>IT공학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">전기전자공학과</a></li>
+                                    <li><a href="#" target="_self" title="">컴퓨터공학과</a></li>
+                                    <li><a href="#" target="_self" title="">소프트웨어공학과</a></li>
+                                    <li><a href="#" target="_self" title="">기계공학과(신설)</a></li>
+                                    <li><a href="#" target="_self" title="">소방방재학과(신설)</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>디자인학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">디자인학과(구.시각디자인전공</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span>문화예술학부</span>
+                                <ol>
+                                    <li><a href="#" target="_self" title="">문화예술경영학과</a></li>
+                                    <li><a href="#" target="_self" title="">문예창작과</a></li>
+                                    <li><a href="#" target="_self" title="">미디어영상학과</a></li>
+                                    <li><a href="#" target="_self" title="">회화과</a></li>
+                                    <li><a href="#" target="_self" title="">실용음악학과</a></li>
+                                    <li><a href="#" target="_self" title="">패션학과</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div class="f_go_cont2 f_go_cont">
+                <ul>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>평생교육원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>연합대학</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>디지털도서관</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>심리상담센터</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>사회공헌</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="">
+                            <p></p>
+                            <span>미술상</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </article>
         <div class="footer">
             <div class="footerInner">
@@ -1286,7 +1287,7 @@
                     <li><a href="#" target="_self" title="">2020년비전교원채용</a></li>
                 </ul>
                 <div class="footer_cont">
-                    <h1 class="f_logo"><img src="#" alt="서울디지털대학교 로고"/></h1>
+                    <h1 class="f_logo"><img src="img/main/f_logo.png" alt="서울디지털대학교 로고"/></h1>
                     <div>
                         <address>
                             <span>대표자명 : 총장 김재홍</span>
@@ -1295,16 +1296,17 @@
                             <span>대학본부 07654 서울특별시 강서구 공항대로 424(화곡동1107-2)</span>
                             <span>마포캠퍼스 04157 서울특별시 마포구 독막로 320(도화동560)</span>
                             <span>부천캠퍼스 14538 경기도 부천시 원미구 길주로 191(중동 1033-1)</span>
+                            <br/>
                             <span>TEL 1644-0982</span>
                             <span>FAX 02-2128-3006</span>
                             <span>E-MAIL webmaster@sdu.ac.kr</span>
                         </address>
                         <p class="copyright">©SEOUL DIGITAL UNIVERSITY. All Rights Reserved.</p>
                         <ol class="f_sns">
-                            <li><a href="#" target="_blank" title="블로그 새창이동"><img src="#" alt="블로그"/></a></li>
-                            <li><a href="#" target="_blank" title="페이스북 새창이동"><img src="#" alt="페이스북"/></a></li>
-                            <li><a href="#" target="_blank" title="트위터 새창이동"><img src="#" alt="트위터"/></a></li>
-                            <li><a href="#" target="_blank" title="유튜브 새창이동"><img src="#" alt="유튜브"/></a></li>
+                            <li><a href="#" target="_blank" title="블로그 새창이동"><img src="img/main/f_sns1.png" alt="블로그"/></a></li>
+                            <li><a href="#" target="_blank" title="페이스북 새창이동"><img src="img/main/f_sns2.png" alt="페이스북"/></a></li>
+                            <li><a href="#" target="_blank" title="트위터 새창이동"><img src="img/main/f_sns3.png" alt="트위터"/></a></li>
+                            <li><a href="#" target="_blank" title="유튜브 새창이동"><img src="img/main/f_sns4.png" alt="유튜브"/></a></li>
                         </ol>
                     </div>
                 </div>
@@ -1355,12 +1357,12 @@
             $('.m_notice>ul>li').eq(0).find('>a').eq(0).next().show();
             $('.m_notice>ul>li').eq(0).find('.moreBt').show();
             $('.m_notice .m_notice_contSub_tit').on('click',function(){
-                    $(this).parents().siblings().find('.m_notice_contSub_tit').removeClass('onN');
-                    $(this).parents().siblings().find('.m_notice_contSub').hide();
-                    $(this).parents().siblings().find('.moreBt').hide();
+                    $(this).parent().siblings().find('.m_notice_contSub_tit').removeClass('onN');
+                    $(this).parent().siblings().find('.m_notice_contSub').hide();
+                    $(this).parent().siblings().find('.moreBt').hide();
                     $(this).next().show();
                     $(this).addClass('onN');
-                    $(this).parents().find('>.moreBt').show();
+                    $(this).parent().find('>.moreBt').show();
             });
 
             //calender
@@ -1453,17 +1455,54 @@
             })
 
             //explore slick
-            $('.m_exploreSl_1').slick({
+            $('.m_exploreSl').slick({
                 dots:false,
                 arrows:true,
-                slidesToShow:3
+                infinite:true,
+                slidesToShow:4
             });
             //explore tab
-            $('.m_exploreSl_1').show();
+            $('.m_exploreSl_1').show().siblings().addClass('onE');
             $('.m_explore_cont button').on('click',function(){
-                $(this).parents().siblings().find('>div').hide();
-                $(this).siblings().show();
-                $(this).addClass('onE');
+                $(this).parent().siblings().find('>div').hide();
+                $(this).parent().siblings().find('>button').removeClass('onE');
+                $(this).addClass('onE').siblings().show();
+            })
+            //explore arrow event
+            $('m_exploreSl').find('slick-arrow').attr('display','none');
+            $('.m_explore').on('mouseover',function(){
+                $(this).find('slick-arrow').show();
+            })
+            //explore paging
+            /* var ex_current=$('.m_explore_cont button.onE').siblings().find('.slick-slide.slick-current').index(); */
+            /* console.log(ex_current); */
+            /* var ex_total=$('.m_explore_cont button.onE').siblings().find('.slick-slide').length(); */
+            /* console.log($('.m_exploreSl_1').slickCurrentSlide)
+            $('.m_explore_paging .currentPage').text(ex_current); */
+            /* $('.m_explore_paging .totalPage').text(ex_total); */
+
+            //f_go
+            $('.f_go_btn1').on('click',function(){
+                if($(this).hasClass('onFG')){
+                    $('.f_go_cont').hide();
+                    $(this).removeClass('onFG').parent().removeClass('onFG');
+                }else{
+                    $('.f_go_btn2').removeClass('onFG').parent().removeClass('onFG');
+                    $('.f_go_cont').hide();
+                    $('.f_go_cont1').show();
+                    $(this).addClass('onFG').parent().addClass('onFG');
+                }
+            })
+            $('.f_go_btn2').on('click',function(){
+                if($(this).hasClass('onFG')){
+                    $('.f_go_cont').hide();
+                    $(this).removeClass('onFG').parent().removeClass('onFG');
+                }else{
+                    $('.f_go_btn1').removeClass('onFG').parent().removeClass('onFG');
+                    $('.f_go_cont').hide();
+                    $('.f_go_cont2').show();
+                    $(this).addClass('onFG').parent().addClass('onFG');
+                }
             })
 
             //scroll animation
@@ -1544,6 +1583,13 @@
                         );
                         return false;
                     }    
+                })
+                $('.m_explore').each(function(i){
+                    var explore_bottom=$(this).offset().top+$(this).outerHeight();
+                    var explore_height=$(this).outerHeight();
+                    if(window_bottom>(explore_bottom-(explore_height*0.5))){
+                        $(this).addClass('ani_explore');
+                    }
                 })
             })
         })
