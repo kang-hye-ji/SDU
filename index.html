@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/base.css" type="text/css"/>
     <link rel="stylesheet" href="css/layout.css" type="text/css"/>
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
     <script src="js/jquery.easing.1.3.js"></script>
-    <!-- <script src="js/countUp-jquery.js"></script> -->
     <script src="js/slick.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -992,19 +993,19 @@
                     <div class="report_cont1">
                         <div></div>
                         <h4>졸업생</h4>
-                        <span class="counter">34368</span>
+                        <span id="counter1"></span>
                         <p>국내외 유명 대학원 석박사 과정 진학<br/>사법고시, 로스쿨, 미국변호사, CPA, AICPA 배출</p>
                     </div>
                     <div class="report_cont2">
                         <div></div>
                         <h4>학생수</h4>
-                        <span class="counter">11868</span>
+                        <span id="counter2"></span>
                         <p>5년 연속 1만명 이상<br/>등록하는 사이버대학</p>
                     </div>
                     <div class="report_cont3">
                         <div></div>
                         <h4>산학협력기관</h4>
-                        <span class="counter">1240</span>
+                        <span id="counter3"></span>
                         <p>산학·관학·군학 산합혁력<br/>고교·전문대·대학원 제휴 협약</p>
                     </div>
                 </div>
@@ -1019,107 +1020,120 @@
             </article>
             <article class="m_explore">
                 <h2>EXPLORE SDU</h2>
-                <div class="m_explore_cont">
-                    <div class="m_explore_cont1">
-                        <h3>인문사회계열</h3>
-                        <ul>
-                            <li>
-                                <span>경상학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">경영학과</a></li>
-                                    <li><a href="#" target="_self" title="">세무회계학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>법무경찰학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">법무행정학과</a></li>
-                                    <li><a href="#" target="_self" title="">경찰학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>부동산학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">부동산학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>상담심리학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">상담심리학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>사회복지학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">사회복지학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>국제분야</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">영어학과</a></li>
-                                    <li><a href="#" target="_self" title="">중국어학과</a></li>
-                                    <li><a href="#" target="_self" title="">일본학과</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>교육분야</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">평생교육학과</a></li>
-                                    <li><a href="#" target="_self" title="">아동학과</a></li>
-                                </ol>
-                            </li>
-                        </ul>
-                        <div class="m_explore_dim"></div>
-                    </div>
-                    <div class="m_explore_cont2">
-                        <h3>IT·문화예술계열</h3>
-                        <ul>
-                            <li>
-                                <span>IT공학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">전기전자공학과</a></li>
-                                    <li><a href="#" target="_self" title="">컴퓨터공학과</a></li>
-                                    <li><a href="#" target="_self" title="">소프트웨어공학과</a></li>
-                                    <li><a href="#" target="_self" title="">기계공학과(신설)</a></li>
-                                    <li><a href="#" target="_self" title="">소방방재학과(신설)</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>디자인학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">디자인학과(구.시각디자인전공</a></li>
-                                </ol>
-                            </li>
-                            <li>
-                                <span>문화예술학부</span>
-                                <ol>
-                                    <li><a href="#" target="_self" title="">문화예술경영학과</a></li>
-                                    <li><a href="#" target="_self" title="">문예창작과</a></li>
-                                    <li><a href="#" target="_self" title="">미디어영상학과</a></li>
-                                    <li><a href="#" target="_self" title="">회화과</a></li>
-                                    <li><a href="#" target="_self" title="">실용음악학과</a></li>
-                                    <li><a href="#" target="_self" title="">패션학과</a></li>
-                                </ol>
-                            </li>
-                        </ul>
-                        <div class="m_explore_dim"></div>
-                    </div>
-                    <div class="m_explore_cont3">
-                        <h3>융합과정</h3>
-                        <ul>
-                            <li><a href="#" target="_self" title="">4차산업혁명융합과정</a></li>
-                            <li><a href="#" target="_self" title="">리더십융합과정</a></li>
-                            <li><a href="#" target="_self" title="">글로벌비즈니스융합과정</a></li>
-                            <li><a href="#" target="_self" title="">영상스토리텔링융합과정</a></li>
-                            <li><a href="#" target="_self" title="">뮤직매니지먼트융합과정</a></li>
-                            <li><a href="#" target="_self" title="">범죄예방환경설계과정</a></li>
-                            <li><a href="#" target="_self" title="">스마트메이커융합과정</a></li>
-                        </ul>
-                        <div class="m_explore_dim"></div>
-                    </div>
-                </div>
+                <ul class="m_explore_cont">
+                    <li>
+                        <button type="button">일반학과</button>
+                        <div class="m_exploreSl_1">
+                            <div class="m_exploreSl_1-1">
+                                <a target="_self" title="" href="#">
+                                    <p>경상학부</p>
+                                    <span>경영, 마케팅, 기업가정신, 재무, 회계, 무역, 물류 등의 이론을 학습하고 경영자의 기본 소양을 키울 수 있는 교육을 제공하고 있습니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-2">
+                                <a target="_self" title="" href="#">
+                                    <p>법무경찰학부</p>
+                                    <span>법률지식과 행정관리 실무, 범죄심리, 프로파일링의 실무지식을 전수할 전문성있는 교과목을 제공하고 있습니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-3">
+                                <a target="_self" title="" href="#">
+                                    <p>부동산학부</p>
+                                    <span>대한민국 최고 부동산 대학 SDU부동산학부에서는 부동산경매, 개발, 자산관리 등 부동산 재테크와 비즈니스 전문가를 양성합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-4">
+                                <a target="_self" title="" href="#">
+                                    <p>상담심리학부</p>
+                                    <span>상담심리 통합교육을 선도하는 카운슬링 리더 양성을 목표로 상담 기초이론부터 상담실제분야까지 체계적인 배움의 터를 제공하고 있습니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-5">
+                                <a target="_self" title="" href="#">
+                                    <p>사회복지학부</p>
+                                    <span>인간의 삶의 질 향상을 위해 체계적인 이론 및 현장 실습 교육을 통한 사회 복지전문인력 양성을 최고의 목표로 합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-6">
+                                <a target="_self" title="" href="#">
+                                    <p>국제분야</p>
+                                    <span>언어와 문화를 바탕으로 한 온라인 어학 교육의 선두주자로서 타 대학과 차별화된 실용 어학 강의로 경쟁력 있는 글로벌 리더를 양성합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-7">
+                                <a target="_self" title="" href="#">
+                                    <p>교육분야</p>
+                                    <span>평생교육, 아동교육, 이러닝, 교육공학, 인적자원개발, 학습코칭, 전문교강사, 인터넷윤리지도사 등 전문분야별 이론 및 실무에 탁월한 교육을 제공합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-8">
+                                <a target="_self" title="" href="#">
+                                    <p>IT공학부</p>
+                                    <span>최신 IT기술과 도구를 사용하여 창의성 있는 프로그램과 IT서비스를 개발할 수 있는 핵심 인력을 양성합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-9">
+                                <a target="_self" title="" href="#">
+                                    <p>디자인학부</p>
+                                    <span>실무현장의 생생한 체험과 탄탄한 이론을 기반으로 전문성 있는 디자인 기초과정과 문화·정보·기술 트랜드를 디자인에 반영한 심화 교과목을 제공합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_1-10">
+                                <a target="_self" title="" href="#">
+                                    <p>문화예술학부</p>
+                                    <span>학계에서 활발하게 활동하시는 이론 전문가와 분야별 최고의 전문가들이 모여 급변하는 문화예술산업에 꼭 필요한 교육과정을 제공합니다.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button">융합과정</button>
+                        <div class="m_exploreSl_2">
+                            <div class="m_exploreSl_2-1">
+                                <a target="_self" title="" href="#">
+                                    <p>4차산업혁명융합과정</p>
+                                    <span>산업구조의 변화, IT와 스마트 혁명의 도래, 세계 통합 시대의 가속화, 급변하는 디지털시대에 적합한 창의적이고 혁신적인 미래 인재 양성을 위하여 2019년도 신설된 전공 융합과정입니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-2">
+                                <a target="_self" title="" href="#">
+                                    <p>리더쉽융합과정</p>
+                                    <span>실용적이고 전문적인 지식을 바탕으로 양성평등과 사회적 약자의 보호 등 헌법적 가치를 직접 구현할 수 있는 리더십을 갖추도록 하여 정치, 행정, 사회 등 각 분야를 선도하는 인재를 육성하는 것을 목표로 합니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-3">
+                                <a target="_self" title="" href="#">
+                                    <p>글로벌비즈니스융합과정</p>
+                                    <span>4차 산업혁명을 이끌 글로벌 비즈니스 인재를 양성하기 위해 영어학과 및 경상계열학과의 커리큘럼 융합과정으로서, 글로벌 커뮤니케이션의 근간이 되는 비즈니스 영어능력과 함께 글로벌 경영 및 무역실무와 마케팅 등의 기본을</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-4">
+                                <a target="_self" title="" href="#">
+                                    <p>영상스토리텔링융합과정</p>
+                                    <span>미디어영상학과, 문예창작학과가 연계하여 영상제작기술과 문화 콘텐츠 융합을 통해 새로운 콘텐츠 분야를 선도하는 인재 양성을 목표로 개설한 융합 과정입니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-5">
+                                <a target="_self" title="" href="#">
+                                    <p>뮤직매니지먼트융합과정</p>
+                                    <span>뮤직비즈니스·뮤직산업분야의 기획, 유통 실무 전문지식 이수과정으로 음악 작업, 실기 능력뿐만 아니라 음반, 공연, 콘텐츠 영역의 실무경영능력을 갖춘 전문가양성을 위한 과정입니다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-6">
+                                <a target="_self" title="" href="#">
+                                    <p>범죄예방환경설계과정</p>
+                                    <span>범죄심리와 환경에 대한 분석을 통하여 설계단계부터 건축공간의 특성을 고려한 안전설계지침을 세우고, 공간 특성을 고려한 셉티드 적용방안을 적용하여 안전한 지역만들기에 기여하기 위한 전문가 양성을 목표로 한다.</span>
+                                </a>
+                            </div>
+                            <div class="m_exploreSl_2-7">
+                                <a target="_self" title="" href="#">
+                                    <p>스마트메이커융합과정</p>
+                                    <span>4차 산업혁명시대의 주도적 역할을 할 혁신적 미래 디자이너 양성을 목표로 타 분야와 연계하여 견문과 지식을 넓히고 미래사회가 요구하는 멀티플레이어 양성을 목표로 한다.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </article>
         </section>
     </div>
@@ -1438,8 +1452,19 @@
                 slidesToShow:2
             })
 
-            //report counter
-            
+            //explore slick
+            $('.m_exploreSl_1').slick({
+                dots:false,
+                arrows:true,
+                slidesToShow:3
+            });
+            //explore tab
+            $('.m_exploreSl_1').show();
+            $('.m_explore_cont button').on('click',function(){
+                $(this).parents().siblings().find('>div').hide();
+                $(this).siblings().show();
+                $(this).addClass('onE');
+            })
 
             //scroll animation
             $(window).scroll(function(){
@@ -1481,6 +1506,44 @@
                     if(window_bottom>(insight_bottom-(insight_height*0.5))){
                         $(this).addClass('ani_insight');
                     }
+                })
+                $('.m_report').each(function(i){
+                    var report_bottom=$(this).offset().top+$(this).outerHeight();
+                    var report_height=$(this).outerHeight();
+                    if(window_bottom>(report_bottom-(report_height*0.5))){
+                        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+                        $('#counter1').animateNumber(
+                            {
+                                number: 34368,
+                                numberStep: comma_separator_number_step
+                            },
+                            {
+                                easing:'swing',
+                                duration:1000
+                            }
+                        );
+                        $('#counter2').animateNumber(
+                            {
+                                number: 11868,
+                                numberStep: comma_separator_number_step
+                            },
+                            {
+                                easing:'swing',
+                                duration:1000
+                            }
+                        );
+                        $('#counter3').animateNumber(
+                            {
+                                number: 1240,
+                                numberStep: comma_separator_number_step
+                            },
+                            {
+                                easing:'swing',
+                                duration:1000
+                            }
+                        );
+                        return false;
+                    }    
                 })
             })
         })
