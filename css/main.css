@@ -778,21 +778,10 @@ article.m_visual .m_visualSl_cont1>a strong{
 
 
 .m_explore{
-    padding:86px 0 105px 160px; width:1760px; position:relative;
+    padding:86px 0 105px 160px; width:1760px; 
 }
 .m_explore>h2{
     font-size:50px; font-family:'Oswald', sans-serif; font-weight:500;
-}
-.m_explore .m_explore_paging{
-    width:50px; height:26px; position:absolute; top:0;
-    color:#bbbbbb; font-size:24px; font-family:'Oswald', sans-serif;
-}
-.m_explore .m_explore_paging:after{
-    content:''; display:block; width:160px; height:4px; position:absolute; top:10px; left:55px;
-    background:#bbbbbb;
-}
-.m_explore .m_explore_paging .currentPage{
-    color:#000;
 }
 
 .m_explore_cont{
@@ -821,6 +810,22 @@ article.m_visual .m_visualSl_cont1>a strong{
 .m_explore_cont>li>button.onE:before{
     content:''; display:block; width:100px; height:3px; position:absolute; bottom:-10px; left:1px;
     background:#977749;
+}
+
+.m_explore .m_explore_paging{
+    width:80px; height:26px; position:absolute; top:0; right:190px;
+    color:#bbbbbb; font-size:24px; font-family:'Oswald', sans-serif;
+}
+.m_explore .m_explore_paging:after{
+    content:''; display:block; width:160px; height:4px; position:absolute; top:10px; left:110px;
+    background:#bbbbbb;
+}
+.m_explore .m_explore_paging .totalPage{
+    width:50px; display:inline-block;
+}
+.m_explore .m_explore_paging .currentPage{
+    width:20px; display:inline-block;
+    color:#000;
 }
 
 .m_explore_cont .m_exploreSl{
@@ -941,6 +946,9 @@ article.m_visual .m_visualSl_cont1>a strong{
 }
 .m_exploreSl .slick-next{
     background:url('../img/main/btn_cirNext_gray.png') no-repeat; left:1600px;
+}
+.m_exploreSl .slick-dots{
+    display:none !important;
 }
 
 
@@ -1100,5 +1108,3 @@ footer .f_go .f_go_btn>li:last-child>button{
     from{opacity:0;}
     to{opacity:1;}
 }
-
-/* paging 할 차례 */

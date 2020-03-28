@@ -1020,13 +1020,14 @@
             </article>
             <article class="m_explore">
                 <h2>EXPLORE SDU</h2>
-                <div class="m_explore_paging">
-                    <p class="currentPage"></p>
-                    <p class="totalPage"></p>
-                </div>
+                
                 <ul class="m_explore_cont">
                     <li>
                         <button type="button">일반학과</button>
+                        <div class="m_explore_paging">
+                            <p class="currentPage"></p>
+                            <p class="totalPage"></p>
+                        </div>
                         <div class="m_exploreSl m_exploreSl_1">
                             <div class="m_exploreSl_1-1">
                                 <a target="_self" title="" href="#">
@@ -1092,6 +1093,10 @@
                     </li>
                     <li>
                         <button type="button">융합과정</button>
+                        <div class="m_explore_paging">
+                            <p class="currentPage"></p>
+                            <p class="totalPage"></p>
+                        </div>
                         <div class="m_exploreSl m_exploreSl_2">
                             <div class="m_exploreSl_2-1">
                                 <a target="_self" title="" href="#">
@@ -1456,13 +1461,14 @@
 
             //explore slick
             $('.m_exploreSl').slick({
-                dots:false,
+                dots:true,
                 arrows:true,
                 infinite:true,
                 slidesToShow:4
             });
             //explore tab
             $('.m_exploreSl_1').show().siblings().addClass('onE');
+            $('.m_exploreSl_2').parent().find('.m_explore_paging').hide();
             $('.m_explore_cont button').on('click',function(){
                 $(this).parent().siblings().find('>div').hide();
                 $(this).parent().siblings().find('>button').removeClass('onE');
@@ -1474,12 +1480,16 @@
                 $(this).find('slick-arrow').show();
             })
             //explore paging
-            /* var ex_current=$('.m_explore_cont button.onE').siblings().find('.slick-slide.slick-current').index(); */
-            /* console.log(ex_current); */
-            /* var ex_total=$('.m_explore_cont button.onE').siblings().find('.slick-slide').length(); */
-            /* console.log($('.m_exploreSl_1').slickCurrentSlide)
-            $('.m_explore_paging .currentPage').text(ex_current); */
-            /* $('.m_explore_paging .totalPage').text(ex_total); */
+            $('.m_exploreSl').each(function(){
+                var ex_total=$(this).find('.slick-dots>li').length;
+                $(this).parent().find('.m_explore_paging .totalPage').html(' / ' + ex_total);
+
+                $('.m_explore_paging .currentPage').text('1');
+                $(this).on('afterChange',function(event, slick, currentSlide, nextSlide){
+                    var ex_current=$(this).find('.slick-dots .slick-active').index();
+                    $(this).parent().find('.m_explore_paging .currentPage').html(ex_current + 1);
+                })
+            })
 
             //f_go
             $('.f_go_btn1').on('click',function(){
