@@ -20,12 +20,14 @@
 </head>
 <body>
     <header>
-        <ul class="infoMenu">
-            <li><a href="#" target="_self" title="">로그인</a></li>
-            <li><a href="#" target="_blank" title="입학지원센터 새창열기">입학지원센터</a></li>
-            <li><a href="#" target="_blank" title="시간제등록 새창열기">시간제등록</a></li>
-            <li><a href="#" target="_blank" title="영어번역페이지로 새창열기">ENG</a></li>
-        </ul>
+        <div class="infoMenuWrap">
+            <ul class="infoMenu">
+                <li><a href="#" target="_self" title="">로그인</a></li>
+                <li><a href="#" target="_blank" title="입학지원센터 새창열기">입학지원센터</a></li>
+                <li><a href="#" target="_blank" title="시간제등록 새창열기">시간제등록</a></li>
+                <li><a href="#" target="_blank" title="영어번역페이지로 새창열기">ENG</a></li>
+            </ul>
+        </div>
         <div class="mainBar">
             <h1 class="logo">
                 <a href="#" target="_self" title="서울디지털대학교 메인페이지로 이동">
@@ -1247,14 +1249,14 @@
                 $(this).addClass('onMnT');
             })
             $('.gnbSub').on('mouseleave',function(){
-                $('.gnbSub').hide();
+                $('.gnbSub').slideUp();
                 $('.gnb>li>a').removeClass('onMnT');
                 $('header').removeClass('onH')
                 $('.logo>a>img').attr('src','img/main/SDU_fullLogo_blue.png');
                 $('.siteMenu>img').attr('src','img/main/siteMenu_blue.png');
             })
             $('body').on('mouseleave',function(){
-                $('.gnbSub').hide();
+                $('.gnbSub').slideUp();
                 $('.gnb>li>a').removeClass('onMnT');
                 $('header').removeClass('onH')
                 $('.logo>a>img').attr('src','img/main/SDU_fullLogo_blue.png');
@@ -1263,11 +1265,11 @@
 
             //gnbSub mouseover
             $('.gnbSubWrap ul>li').on('mouseover',function(){
-                $(this).siblings().find('>a').removeClass('onGnbS_a');
-                $(this).find('>a').addClass('onGnbS_a');
+                $(this).siblings().removeClass('onGnbS_a');
+                $(this).addClass('onGnbS_a');
             })
             $('.gnbSubWrap ul').on('mouseleave',function(){
-                $(this).find('>li>a').removeClass('onGnbS_a');
+                $(this).find('>li').removeClass('onGnbS_a');
             })
 
             //visual
