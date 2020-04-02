@@ -1,3 +1,5 @@
+/* 입학안내-이미지 떨어지는 문제(ul>li width 조정?) */
+
 abbr{
     text-decoration:none;
 }
@@ -102,7 +104,7 @@ nav .gnb .gnbSub{
 }
 nav .gnb .gnbSub>.gnbSubWrap{
     *zoom:1; width:1920px; margin:0 auto; min-height:202px; overflow:auto;
-    background:white;
+    background:#fff;
 }
 nav .gnb .gnbSub>.gnbSubWrap:after{
     content:''; display:table; clear:both;
@@ -180,13 +182,13 @@ nav .gnb .gnbSub>.gnbSubWrap>ul>li>ol>li>a:hover:after{
 nav .gnb .gnbSub>.gnbSubWrap>ul>li>ol>li>a>strong{
     line-height:60px;
 }
-
+/* ul>div width가 450이 아닌 500인가?? */
 nav .gnb>li:nth-child(2) .gnbSubWrap>ul{
     padding:0; width:1470px; height:300px;
     background:url('../img/main/gnbS2_bg.png') no-repeat;
 }
 nav .gnb>li:nth-child(2) .gnbSubWrap>ul>li{
-    border:none; padding:0;
+    border:none; padding:0; height:300px; width:1470px;
 }
 nav .gnb>li:nth-child(2) .gnbSubWrap>ul a{
     display:block; width:225px; height:40px; margin:190px 0 0 130px;
@@ -306,7 +308,7 @@ header .siteMenu{
         width:calc(100% - 270px); height:300px;
     }
     nav .gnb>li:nth-child(2) .gnbSubWrap>ul>li{
-        height:300px;
+        height:300px; width:calc(100% - 270px);
     }
     nav .gnb>li:nth-child(4) .gnbSubWrap>ul ol{
         width:100%;
