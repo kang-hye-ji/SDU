@@ -304,11 +304,11 @@ article.m_visual .m_visualSl_cont1>a strong{
     animation:ani_inside_t 0.5s ease 0.5s both;
 }
 @-webkit-keyframes ani_inside_t{
-    from{opacity:0; padding-left:100;}
+    from{opacity:0; padding-left:100px;}
     to{opacity:1; padding-left:0;}
 }
 @keyframes ani_inside_t{
-    from{opacity:0; padding-left:100;}
+    from{opacity:0; padding-left:100px;}
     to{opacity:1; padding-left:0;}
 }
 
