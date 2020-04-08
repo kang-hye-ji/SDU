@@ -1,30 +1,5 @@
 @charset "utf-8";
 
-/* @font-face{
-    font-family:NS_r;
-    src:url(../font/NotoSansKR-Regular.otf?#iefix) format("opentype");
-    src:url(../font/NotoSansKR-Regular-Alphabetic.eot?#iefix) format("embedded-opentype");
-    src:url(../font/NotoSansKR-Regular-Alphabetic.woff?#iefix) format("woff");
-}
-@font-face{
-    font-family:NS_b;
-    src:url(../font/NotoSansKR-Bold.otf?#iefix) format("opentype");
-    src:url(../font/NotoSansKR-Bold-Alphabetic.eot?#iefix) format("embedded-opentype");
-    src:url(../font/NotoSansKR-Bold-Alphabetic.woff?#iefix) format("woff");
-}
-@font-face{
-    font-family:OD_r;
-    src:url(../font/Oswald-Regular.ttf?#iefix) format("truetype");
-    src:url(../font/Oswald-Regular.eot?#iefix) format("embedded-opentype");
-    src:url(../font/Oswald-Regular.woff?#iefix) format("woff");
-}
-@font-face{
-    font-family:OD_b;
-    src:url(../font/Oswald-Bold.ttf?#iefix) format("truetype");
-    src:url(../font/Oswald-Bold.eot?#iefix) format("embedded-opentype");
-    src:url(../font/Oswald-Bold.woff?#iefix) format("woff");
-} */
-
 *   {padding:0; margin:0;}
 ol, ul, li       {list-style:none;}
 caption, legend      {font-size:0; width:0; height:0; line-height:0; overflow:hidden; text-indent:-9999px;}
