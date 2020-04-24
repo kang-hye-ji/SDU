@@ -14,6 +14,7 @@
 	</head>
 	<body>
 		<header>
+			<h2 class="headTit">SDU 안내</h2>
 			<div class="infoMenuWrap">
 				<ul class="infoMenu">
 					<li><a href="#" target="_self" title="">로그인</a></li>
@@ -21,11 +22,17 @@
 					<li><a href="#" target="_blank" title="시간제등록 새창열기">시간제등록</a></li>
 					<li><a href="#" target="_blank" title="영어번역페이지로 새창열기">ENG</a></li>
 				</ul>
+				<ul class="mobInfoMenu">
+					<li><a href="#" target="_self" title="">대학교</a></li>
+					<li><a href="#" target="_blank" title="입학지원센터 새창열기">입학지원센터</a></li>
+					<li><a href="#" target="_blank" title="시간제등록 새창열기">시간제</a></li>
+					<li><a href="#" target="_self" title="">강의</a></li>
+				</ul>
 			</div>
 			<div class="mainBar">
 				<h1 class="logo">
 					<a href="#" target="_self" title="서울디지털대학교 메인페이지로 이동">
-						<img src="img/main/SDU_fullLogo_blue.png" alt="서울디지털대학교 로고"/>
+						<img src="img/main/SDU_fullLogo_white.png" alt="서울디지털대학교 로고"/>
 					</a>
 				</h1>
 				<nav>
@@ -53,9 +60,114 @@
 						</li>
 					</ul>
 				</nav>
-				<a class="siteMenu" href="" title="사이트맵 이동" target="_self"><img src="img/main/siteMenu_blue.png" alt="사이트맵 이동 버튼"/></a>
+				<a class="mobSDU" href="#" target="_self" title="서울디지털대학교 메인페이지">서울디지털대학교</a>
+				<a class="siteMenu" href="" title="사이트맵 이동" target="_self"><img src="img/main/siteMenu_white.png" alt="사이트맵 이동 버튼"/></a>
 			</div>
 		</header>
+		<div class="topBar">
+			<div class="topBarInner">
+				<button class="homeBt" type="button">
+					<img alt="홈버튼" src="img/detail/snb_home_black.png"/>
+					HOME
+				</button>
+				<ul class="top_func">
+					<li>
+						<button type="button">
+							<img alt="글자확대하기" src="img/detail/snb_zoomIn_black.png"/>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<img alt="글자축소하기" src="img/detail/snb_zoomOut_black.png"/>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<img alt="화면인쇄하기" src="img/detail/ico_print_black.png"/>
+						</button>
+					</li>
+					<li>
+						<button class="shareBtn" type="button">
+							<img alt="공유 레이어 열기" src="img/detail/ico_share_black.png"/>
+						</button>
+						<div class="shareLayer">
+							<div class="shareLayerInner">
+								<ul>
+									<li>
+										<a href="#" title="페이스북 공유 새창" target="_blank">페이스북</a>
+									</li>
+									<li>
+										<a href="#" title="블로그 공유 새창" target="_blank">블로그</a>
+									</li>
+									<li>
+										<a href="#" title="트위터 공유 새창" target="_blank">트위터</a>
+									</li>
+									<li>
+										<a href="#" title="URL 복사하기" target="_self">URL 복사</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sideQuick">
+			<div class="sideQuickInner">
+				<button class="QService" type="button">
+					<img alt="퀵서비스" src="img/detail/ico_recGrp_white.png"/>
+				</button>
+				<button class="QTop" type="button">
+					<img alt="최상단으로" src="img/detail/ico_top.png"/>
+				</button>
+			</div>
+		</div>
+		<section class="logInCont">
+			<div class="logInContInner">
+				<h2>일반로그인</h2>
+				<form>
+					<fieldset>
+						<h3>범용인증서 로그인</h3>
+						<button type="button">인증서 로그인</button>
+						<div class="logFormBtn">
+							<a href="#" target="_blank" title="공인인증서 안내 팝업열기">공인인증센터</a>
+							<a href="#" target="_blank" title="공인인증서 안내 팝업열기">자주하는 질문</a>
+						</div>
+					</fieldset>
+					<fieldset>
+						<h3>지문인증 로그인</h3>
+						<div class="logIn2">
+							<input class="ID" type="text" placeholder="학번" required/>
+							<input class="log" type="submit" value="로그인"/>
+							<input class="check" type="checkbox" name="IDsaved"/><label>학번저장</label>
+						</div>
+						<div class="logFormBtn">
+							<a href="#" target="_blank" title="지문인증 안내 팝업열기">지문인증센터</a>
+							<a href="#" target="_blank" title="지문인증 안내 팝업열기">자주하는 질문</a>
+						</div>
+					</fieldset>
+					<fieldset>
+						<h3>학번 로그인</h3>
+						<div class="logIn3">
+							<input class="ID" type="text" placeholder="학번" required/>
+							<input class="PW" type="password" placeholder="비밀번호" required/>
+							<input class="log" type="submit" value="로그인"/>
+							<input class="check1" type="checkbox" name="IDsaved"/><label>학번저장</label>
+							<input class="check2" type="checkbox" name="KBSec"/><label>키보드보안</label>
+						</div>
+						<div class="logFormBtn">
+							<a href="#" target="self" title="">학번찾기</a>
+							<a href="#" target="self" title="">비밀번호 찾기</a>
+						</div>
+					</fieldset>
+				</form>
+				<ul>
+					<li>강의실을 이용하기 위해서는 범용공인인증서 또는 지문인식 로그인 후 이용하실 수 있습니다. 학번으로 로그인을 하시면 강의를 제외한 서비스를 이용하실 수있습니다</li>
+					<li>초기 비밀번호는 입학지원서 작성시 입력한 비밀번호입니다. 개인정보보호를 위해 초기 비밀번호로 로그인 후 [마이페이지 > 비밀번호변경] 메뉴에서 새 비밀번호로 변경하시기 바랍니다.</li>
+					<li>연합대(오프라인대학 학점교류)학생은 SDU연합대 홈페이지(http://union.sdu.ac.kr)에서 로그인과 학번 및 비밀번호 찾기가 가능합니다.</li>
+				</ul>
+			</div>
+		</section>
 		<footer>
 			<article class="f_go">
 				<ul class="f_go_btn">
@@ -229,6 +341,26 @@
 			</div>
 		</footer>
 		<script type="text/javascript" src="js/layout_script.js"></script>
-		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.top_func .shareBtn').on('click',function(){
+					if($(this).hasClass('onShare')){
+						$(this).removeClass('onShare').siblings().hide();
+					}else{
+						$(this).addClass('onShare').siblings().show();
+					}
+				})
+				$(window).resize(function(){
+					var ww=$(window).width();
+					if(ww<1041){
+						$('.logo img').attr('src','img/logIn/mob_logo.png');
+						$('.siteMenu>img').attr('src','img/logIn/mob_hamMenu.png');
+					}else{
+						$('.logo img').attr('src','img/main/SDU_fullLogo_white.png');
+						$('.siteMenu>img').attr('src','img/main/siteMenu_white.png');
+					}
+				})
+			})
+		</script>
 	</body>
 </html>

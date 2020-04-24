@@ -1,19 +1,22 @@
 @charset "utf-8";
 
-abbr{
-    text-decoration:none;
-}
-
 header{
-    width:100%; height:120px; position:fixed; top:0; z-index:100;
-    background:#fff;
-}
-header.onH{
-    background:#032a58;
+    width:100%; height:300px; position:relative;
 }
 
+header .headTit{
+    position:absolute; left:50%; bottom:84px;
+    -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%); font-size:54px; color:#fff; font-weight:500;
+}
+
+header .mobInfoMenu{
+    display:none;
+}
 header .infoMenu{
-    width:360px; position:fixed; top:0; right:0;
+    width:360px; position:absolute; top:0; right:0; *zoom:1;
+}
+header .infoMenu:after{
+    display:table; clear:both; content:''; 
 }
 header .infoMenu>li{
     float:left;
@@ -36,16 +39,14 @@ header .infoMenu>li:nth-child(4)>a{
 }
 
 header .mainBar{
-    width:calc(100% - 360px); position:fixed; top:0; left:0;
+    width:calc(100% - 360px); position:relative;
 }
-
 header .mainBar .logo{
     position:absolute; top:30px; left:160px;
 }
 
-
 nav .gnb{
-    margin:43px auto 0; padding:0 25px 0 220px; width:1000px;
+    margin:0 auto; padding:43px 25px 0 220px; width:1000px;
 }
 nav .gnb>li{
     display:inline-block; margin-right:60px;
@@ -55,52 +56,78 @@ nav .gnb>li:last-child{
 }
 nav .gnb>li>a{
     display:block;
-    font-size:20px; text-decoration:none; color:#000; font-weight:600;
+    font-size:20px; text-decoration:none; color:#fff; font-weight:600;
 }
-nav .gnb>li:nth-child(2)>a{
-    color:#fff;
-}
-header.onH nav .gnb>li>a{
-    color:#fff;
-}
-nav .gnb>li:nth-child(2){
-    position:relative;
-}
-nav .gnb>li:nth-child(2):after{
-    content:''; display:block; width:124px; height:44px; position:absolute; top:-13px; left:-22.5px;
-    z-index:100;
-    background:#f28c0c;
-}
-nav .gnb>li:nth-child(2)>a{
-    position:relative; z-index:150;
+nav .gnb>li>a:hover{
+    color:#cc9c56;
 }
 
-header.onH nav .gnb>li>a.onMnT{
-    position:relative;
-    color:#987649;
-}
-header.onH nav .gnb>li:nth-child(2)>a.onMnT{
-    color:#fff;
-}
-header.onH nav .gnb>li>a.onMnT:after{
-    content:''; position:absolute; width:0; height:2px; bottom:-14px; left:-4px;
-    background:#cc9c56;
-    animation:ani_gnbA 0.3s ease 0s both;
-}
-@-webkit-keyframes ani_gnbA{
-    from{width:0;}
-    to{width:110%;}
-}
-@keyframes ani_gnbA{
-    from{width:0;}
-    to{width:110%;}
-}
-header.onH nav .gnb>li:nth-child(2)>a.onMnT:after{
+header .mobSDU{
     display:none;
 }
-
 header .siteMenu{
     position:absolute; top:40px; right:25px;
+}
+
+.topBar{
+    width:100%; height:60px;
+    background:#f6f6f7; 
+}
+.topBar .topBarInner{
+    max-width:1200px; margin:0 auto; position:relative;
+}
+
+.topBar .homeBt, .topBar .top_func{
+    position:absolute; top:21.5px; 
+}
+.homeBt{
+    left:30px;
+    font-size:15px;
+}
+
+.topBar .top_func{
+    right:30px; width:150px; height:20px;
+}
+.topBar .top_func>li{
+    float:left; margin-left:20px;
+}
+/* 쉐어레이어 위치조정 할 차례 */
+
+.topBar .top_func .shareLayer{
+    display:none; position:absolute; top:40px; right:-30px;
+}
+.topBar .top_func .shareLayerInner{
+    width:330px; height:103px; position:relative;
+    background:#fff; border:1px solid #000;
+}
+.topBar .top_func .shareLayerInner:after{
+    top:-9px; right:31px; display:block; content:''; width:9px; height:9px; position:absolute;
+    background:url('../img/detail/ico_speechBubble_arrT.png') no-repeat;
+}
+.topBar .top_func .shareLayerInner ul{
+    padding:18.5px 15px 0;
+}
+.topBar .top_func .shareLayerInner ul:after{
+    clear:both; content:''; display:table;
+}
+.topBar .top_func .shareLayerInner ul>li{
+    float:left; width:75px; height:66px;
+}
+.topBar .top_func .shareLayerInner ul>li>a{
+    display:block; width:75px; height:16px; padding-top:50px; text-align:center;
+    text-decoration:none; font-size:14px;
+}
+.topBar .top_func .shareLayerInner ul>li:nth-child(1)>a{
+    background:url('../img/detail/sns_cir_facebook.png') no-repeat top;
+}
+.topBar .top_func .shareLayerInner ul>li:nth-child(2)>a{
+    background:url('../img/detail/sns_cir_nBlog.png') no-repeat top;
+}
+.topBar .top_func .shareLayerInner ul>li:nth-child(3)>a{
+    background:url('../img/detail/sns_cir_twitter.png') no-repeat top;
+}
+.topBar .top_func .shareLayerInner ul>li:nth-child(4)>a{
+    background:url('../img/detail/sns_cir_urlCopy.png') no-repeat top;
 }
 
 .f_go_cont1{
@@ -252,12 +279,8 @@ footer .f_go .f_go_btn>li:last-child>button{
 }
 
 @media (max-width:1760px){
-    header{
-        height:140px;
-    }
-    
     header .infoMenuWrap{
-        width:100%; position:fixed; top:0; height:47px;
+        width:100%; height:47px;
         background:#032a58;
     }
     header .infoMenu{
@@ -269,7 +292,7 @@ footer .f_go .f_go_btn>li:last-child>button{
     }
     
     header .mainBar{
-        width:100%; top:47px;
+        width:100%; position:absolute; top:47px; 
     }
     
     header .mainBar .logo{
@@ -279,14 +302,15 @@ footer .f_go .f_go_btn>li:last-child>button{
         width:112px; height:48px;
     }
     
+
     nav .gnb{
-        margin:35px auto 0; width:790px; padding:0;
+        margin:40px auto; width:850px; padding:0;
     }
     nav .gnb>li{
         margin-right:40px;
     }
     nav .gnb>li>a{
-        font-size:17px;
+        font-size:19px;
     }
     nav .gnb>li:nth-child(2){
         position:relative;
@@ -294,14 +318,14 @@ footer .f_go .f_go_btn>li:last-child>button{
     nav .gnb>li:nth-child(2):after{
         width:110px; height:40px; top:-11.5px; left:-20px;
     }
-	
+    
 	header .siteMenu{
         top:34px;
     }
 }
 
 @media(max-width:1200px){
-    header .infoMenuWrap{
+    /* header .infoMenuWrap{
         min-width:1200px;
     }
     header .infoMenu{
@@ -313,7 +337,7 @@ footer .f_go .f_go_btn>li:last-child>button{
 
     header .siteMenu{
         right:120px;
-    }
+    } */
 	
 	footer .f_go{
         width:1200px; 
@@ -333,5 +357,115 @@ footer .f_go .f_go_btn>li:last-child>button{
     }
     .footer .footerInner{
         width:1100px;
+    }
+}
+
+@media (max-width:1041px){
+    header{
+        height:181px;
+        background:none;
+    }
+
+    header .headTit{
+        display:none;
+    }
+
+    header .infoMenuWrap{
+        height:80px; *zoom:1;
+        border-bottom:1px solid #284a70;
+    }
+    header .infoMenuWrap:after{
+        display:table; clear:both; content:'';
+    }
+    header .infoMenuWrap .infoMenu{
+        display:none;
+    }
+
+    header .mobInfoMenu{
+        display:block;
+    }
+    header .mobInfoMenu>li{
+        float:left;
+    }
+    header .mobInfoMenu>li>a{
+        position:relative; display:block; height:80px; line-height:80px; padding:0 30px;
+        text-decoration:none; font-size:28px; color:#9BB9DC;
+    }
+    header .mobInfoMenu>li>a:after{
+        position:absolute; top:28px; right:0; display:block; content:''; width:1px; height:25px;
+        background:#9dd9dc;
+    }
+    header .mobInfoMenu>li:nth-child(3)>a:after, header .mobInfoMenu>li:nth-child(4)>a:after{
+        display:none;
+    }
+
+    header .mobInfoMenu>li:nth-child(4)>a{
+        position:absolute; right:0; width:130px; text-align:center; padding:0;
+        color:#fff; font-weight:500; background:#977649;
+    }
+
+    header .mainBar{
+        height:100px; top:81px;
+        background:#032a58;
+    }
+    header .mainBar .logo{
+        width:121px; height:30px; top:35px; left:25px;
+    }
+    header .mainBar .logo img{
+        width:121px; height:30px;
+    }
+    nav, .gnb{
+        display:none;
+    }
+    .mainBar .mobSDU{
+        display:block; margin:30px auto 0; width:288px;
+        color:#fff; font-size:36px; font-weight:700; text-decoration:none;
+    }
+    header .siteMenu{
+        top:30px;
+    }
+}
+
+@media (max-width:768px){
+    header{
+        height:91px;
+    }
+
+    header .infoMenuWrap{
+        height:40px; 
+    }
+    
+    header .mobInfoMenu>li>a{
+        height:40px; line-height:40px; padding:0 15px;
+        font-size:14px;
+    }
+    header .mobInfoMenu>li>a:after{
+        top:14px; height:14px;
+        background:#9dd9dc;
+    }
+
+    header .mobInfoMenu>li:nth-child(4)>a{
+        width:65px;
+    }
+
+    header .mainBar{
+        height:50px; top:41px;
+    }
+    header .mainBar .logo{
+        width:61px; height:15.11px; top:18px; left:10px;
+    }
+    header .mainBar .logo img{
+        width:61px; height:15.11px;
+    }
+
+    .mainBar .mobSDU{
+        margin:17px auto 0; width:160px;
+        font-size:20px;
+    }
+    header .siteMenu{
+        top:17px; right:10px;
+    }
+    header .siteMenu img{
+        width:22px; height:22px; 
     }
 }

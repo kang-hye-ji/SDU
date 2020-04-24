@@ -1,3 +1,7 @@
 @charset "utf-8";
 @import url('base.css');
 @import url('layout_detail.css');
+
+header{
+    background:url('../img/logIn/titleBg.jpg') no-repeat center;
+}

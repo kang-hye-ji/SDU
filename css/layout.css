@@ -5,7 +5,7 @@ abbr{
 }
 
 header{
-    width:100%; height:120px; position:fixed; top:0; z-index:100;
+    width:100%; height:100px/* 120px */; position:fixed; top:0; z-index:100;
     background:#fff;
 }
 header.onH{
@@ -13,7 +13,10 @@ header.onH{
 }
 
 header .infoMenu{
-    width:360px; position:fixed; top:0; right:0;
+    width:360px; position:fixed; top:0; right:0; *zoom:1;
+}
+header .infoMenu:after{
+    display:table; clear:both; content:''; 
 }
 header .infoMenu>li{
     float:left;
