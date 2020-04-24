@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	//f_go
+	$('.f_go_btn1').on('click',function(){
+		if($(this).hasClass('onFG')){
+			$('.f_go_cont').hide();
+			$(this).removeClass('onFG').parent().removeClass('onFG');
+		}else{
+			$('.f_go_btn2').removeClass('onFG').parent().removeClass('onFG');
+			$('.f_go_cont').hide();
+			$('.f_go_cont1').show();
+			$(this).addClass('onFG').parent().addClass('onFG');
+		}
+	})
+	$('.f_go_btn2').on('click',function(){
+		if($(this).hasClass('onFG')){
+			$('.f_go_cont').hide();
+			$(this).removeClass('onFG').parent().removeClass('onFG');
+		}else{
+			$('.f_go_btn1').removeClass('onFG').parent().removeClass('onFG');
+			$('.f_go_cont').hide();
+			$('.f_go_cont2').show();
+			$(this).addClass('onFG').parent().addClass('onFG');
+		}
+	})
+})
