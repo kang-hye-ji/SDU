@@ -5,3 +5,195 @@
 header{
     background:url('../img/logIn/titleBg.jpg') no-repeat center;
 }
+
+.logInCont .logInContInner{
+    max-width:1200px; width:calc(100% - 60px); margin:0 auto; padding:50px 30px 80px;
+}
+.logInContInner>h2{
+    font-size:40px;
+}
+
+.logInCont form{
+    *zoom:1; padding:50px; margin:40px 0;
+    border:1px solid #dbdfe2;
+}
+.logInCont form:after{
+    display:table; clear:both; content:'';
+}
+.logInCont form>fieldset{
+    float:left; width:calc(33.2% - 60px); padding:0 30px; height:418px; position:relative;
+    border:none;
+}
+.logInCont form>fieldset:after{
+    top:0; right:-3px;display:block; width:1px; height:418px; position:absolute; content:''; 
+    background:#dbdfe2;
+}
+.logInCont form>fieldset:last-child:after{
+    display:none;
+}
+
+.logInCont form>fieldset h3{
+    margin:80px auto 30px; text-align:center; width:100%; display:inline-block; position:relative;
+    font-size:1.6vw; font-weight:550;
+}
+.logInCont form>fieldset h3:after{
+    display:block; content:''; position:absolute; bottom:43px; left:50%;
+    transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+}
+.logInCont form>fieldset:nth-child(1) h3:after{
+    width:56px; height:65px;
+    background:url('../img/logIn/ico_verification2.png') no-repeat;
+}
+.logInCont form>fieldset:nth-child(2) h3:after{
+    width:68px; height:73px;
+    background:url('../img/logIn/ico_fingerprint.png') no-repeat;
+}
+.logInCont form>fieldset:nth-child(3) h3:after{
+    width:68px; height:73px;
+    background:url('../img/logIn/ico_loginlock2.png') no-repeat;
+}
+
+.logInCont form>fieldset:nth-child(1)>button{
+    display:block; width:100%; height:110px;
+    background:#05548f; color:#fff; font-size:1.3vw; font-weight:600;
+}
+
+.logInCont form>fieldset:nth-child(2) .ID{
+    width:calc(100% - 22px); height:50px; padding:0 10px; margin-bottom:10px;
+    border:1px solid #dbdfe2;
+}
+.logInCont form>fieldset:nth-child(2) .log{
+    width:100%; height:50px; margin-bottom:10px;
+    background:#05548f; color:#fff; border:none; font-size:1.1vw; font-weight:600;
+}
+
+.logInCont form>fieldset:nth-child(3) .ID, .logInCont form>fieldset:nth-child(3) .PW{
+    width:calc(100% - 22px); height:50px; padding:0 10px; margin-bottom:10px;
+    border: 1px solid #dbdfe2;
+}
+.logInCont form>fieldset:nth-child(3) .log{
+    width:100%; height:50px; margin-bottom:10px;
+    background:#05548f; color:#fff; border:none; font-size:1.1vw; font-weight:600;
+}
+
+.logInCont form>fieldset .logFormBtn{
+    width:100%; height:46px;
+}
+.logInCont form>fieldset .logFormBtn>a{
+    display:block; width:calc(48% - 30px); height:44px; position:absolute; bottom:0; text-align:center; line-height:44px;
+    background:#fff; border:1px solid #000; color:#000; text-decoration:none; font-weight:550; font-size:1.vw;
+}
+.logInCont form>fieldset .logFormBtn>a:first-child{
+    left:30px;
+}
+.logInCont form>fieldset .logFormBtn>a:last-child{
+    right:30px;
+}
+
+
+.logInContInner ul{
+    width:100%; 
+}
+.logInContInner ul>li{
+    padding-left:10px; margin-bottom:10px; position:relative;
+    font-size:15px; color:#666666; font-weight:530;
+}
+.logInContInner ul>li:after{
+    top:5px; left:0; display:block; position:absolute; width:3px; height:3px; content:'';
+    border-radius:50%; background:#666666;
+}
+
+.mob_f_go_btn{
+    display:none;
+}
+
+@media (max-width:1041px){
+    footer .f_go{
+        width:100%;
+    }
+    footer .f_go_btn{
+        display:none;
+    }
+    footer .mob_f_go_btn{
+        position:relative; display:block; width:100%; height:70px; text-align:center; line-height:70px;
+        font-size:30px; background:#000f20; color:#fff;
+    }
+    footer .mob_f_go_btn:after{
+        top:26px; right:72px; display:block; width:27px; height:14px; content:''; position:absolute;
+        background:url('../img/logIn/ico_familyBtn_close.png') no-repeat;
+    }
+
+    footer .f_go_cont{
+        width:100%;
+    }
+    .f_go_cont1>ul{
+        width:calc(100% - 40px); padding:50px 20px 50px;
+    }
+    .f_go_cont1>ul:after{
+        display:table; clear:both; content:'';
+    }
+    .f_go_cont1>ul>li{
+        width:50%;
+    }
+
+    .f_go_cont1 .f_cont1_list{
+        margin-top:50px;
+    }
+    .f_go_cont1 .f_cont1_list>li{
+        display:block; width:100%; margin:40px 0 0 0;
+    }
+    .f_go_cont1 .f_cont1_list ol:after{
+        display:table; clear:both; content:'';
+    }
+    .f_go_cont1 .f_cont1_list ol>li{
+        float:left; margin-right:20px;
+    }
+    .f_go_cont1 .f_cont1_list ol>li>a{
+        display:inline-block;
+    }
+
+    .f_go_cont2>ul{
+        width:calc(100% - 40px); padding:100px 20px 100px;
+    }
+    .f_go_cont2>ul>li{
+        width:110px; height:100%; margin-right:3%;
+    }
+    /* margin-right 조정할 차례 */
+    .f_go_cont2>ul>li>a>p{
+        display:block; margin:0 auto;
+    }
+    .f_go_cont2>ul>li:nth-child(1)>a>p{
+        background:url('../img/main/f_go_cont2-1.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li:nth-child(2)>a>p{
+        background:url('../img/main/f_go_cont2-2.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li:nth-child(3)>a>p{
+        background:url('../img/main/f_go_cont2-3.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li:nth-child(4)>a>p{
+        background:url('../img/main/f_go_cont2-4.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li:nth-child(5)>a>p{
+        background:url('../img/main/f_go_cont2-5.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li:nth-child(6)>a>p{
+        background:url('../img/main/f_go_cont2-6.png') top no-repeat;
+    }
+    .f_go_cont2>ul>li>a>span{
+        width:100%; text-align:center; display:block;
+    }
+
+    footer, .footer, .footer .footerInner{
+        width:100%;
+    }
+    .footerInner .footer_cont{
+        width:calc(100% - 30px); padding:50px 0 30px 30px;
+    }
+    footer .guide, .footer_cont address, .footer_cont .f_sns{
+        display:none;
+    }
+    .footerInner .footer_cont .copyright{
+        font-size:17px;
+    }
+}

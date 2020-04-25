@@ -137,8 +137,8 @@
 					<fieldset>
 						<h3>지문인증 로그인</h3>
 						<div class="logIn2">
-							<input class="ID" type="text" placeholder="학번" required/>
-							<input class="log" type="submit" value="로그인"/>
+							<input class="ID" type="text" placeholder="학번" required/><br/>
+							<input class="log" type="submit" value="로그인"/><br/>
 							<input class="check" type="checkbox" name="IDsaved"/><label>학번저장</label>
 						</div>
 						<div class="logFormBtn">
@@ -150,8 +150,8 @@
 						<h3>학번 로그인</h3>
 						<div class="logIn3">
 							<input class="ID" type="text" placeholder="학번" required/>
-							<input class="PW" type="password" placeholder="비밀번호" required/>
-							<input class="log" type="submit" value="로그인"/>
+							<input class="PW" type="password" placeholder="비밀번호" required/><br/>
+							<input class="log" type="submit" value="로그인"/><br/>
 							<input class="check1" type="checkbox" name="IDsaved"/><label>학번저장</label>
 							<input class="check2" type="checkbox" name="KBSec"/><label>키보드보안</label>
 						</div>
@@ -162,7 +162,7 @@
 					</fieldset>
 				</form>
 				<ul>
-					<li>강의실을 이용하기 위해서는 범용공인인증서 또는 지문인식 로그인 후 이용하실 수 있습니다. 학번으로 로그인을 하시면 강의를 제외한 서비스를 이용하실 수있습니다</li>
+					<li>강의실을 이용하기 위해서는 범용공인인증서 또는 지문인식 로그인 후 이용하실 수 있습니다. 학번으로 로그인을 하시면 강의를 제외한 서비스를 이용하실 수있습니다.</li>
 					<li>초기 비밀번호는 입학지원서 작성시 입력한 비밀번호입니다. 개인정보보호를 위해 초기 비밀번호로 로그인 후 [마이페이지 > 비밀번호변경] 메뉴에서 새 비밀번호로 변경하시기 바랍니다.</li>
 					<li>연합대(오프라인대학 학점교류)학생은 SDU연합대 홈페이지(http://union.sdu.ac.kr)에서 로그인과 학번 및 비밀번호 찾기가 가능합니다.</li>
 				</ul>
@@ -178,6 +178,7 @@
 						<button class="f_go_btn2" type="button">교내 주요 사이트 바로가기</button>
 					</li>
 				</ul>
+				<button type="button" class="mob_f_go_btn">QUICK LINK</button>
 				<div class="f_go_cont1 f_go_cont">
 					<ul>
 						<li>
@@ -343,14 +344,8 @@
 		<script type="text/javascript" src="js/layout_script.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('.top_func .shareBtn').on('click',function(){
-					if($(this).hasClass('onShare')){
-						$(this).removeClass('onShare').siblings().hide();
-					}else{
-						$(this).addClass('onShare').siblings().show();
-					}
-				})
-				$(window).resize(function(){
+				//모바일 로고, 햄버거메뉴
+				function mobHeader(){
 					var ww=$(window).width();
 					if(ww<1041){
 						$('.logo img').attr('src','img/logIn/mob_logo.png');
@@ -359,6 +354,43 @@
 						$('.logo img').attr('src','img/main/SDU_fullLogo_white.png');
 						$('.siteMenu>img').attr('src','img/main/siteMenu_white.png');
 					}
+				}
+				mobHeader();
+				$(window).resize(function(){
+					mobHeader();
+				})
+
+				//topBar 스크롤이벤트
+				$(window).scroll(function(){
+					var DOCtop=$(document).scrollTop();
+					if(DOCtop>0){
+						$('.topBar').addClass('onTB');
+					}else{
+						$('.topBar').removeClass('onTB');
+					}
+				})
+
+				//공유 박스
+				$('.top_func .shareBtn').on('click',function(){
+					if($(this).hasClass('onShare')){
+						$(this).removeClass('onShare').siblings().hide();
+					}else{
+						$(this).addClass('onShare').siblings().show();
+					}
+				})
+
+				//footer QUICK LINK
+				function QL(){
+					var ww=$(window).width();
+					if(ww<1041){
+						$('.mob_f_go_btn').on('click',function(){
+							$('.f_go_cont').show();
+						})
+					}
+				}
+				QL();
+				$(window).resize(function(){
+					QL();
 				})
 			})
 		</script>
