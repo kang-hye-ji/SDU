@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/logIn.css"/>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
 		<![endif]-->
@@ -113,13 +114,37 @@
 			</div>
 		</div>
 		<div class="sideQuick">
-			<div class="sideQuickInner">
+			<div class="sideQuickBtn">
 				<button class="QService" type="button">
 					<img alt="퀵서비스" src="img/detail/ico_recGrp_white.png"/>
 				</button>
 				<button class="QTop" type="button">
 					<img alt="최상단으로" src="img/detail/ico_top.png"/>
 				</button>
+			</div>
+			<div class="sideQuickCont">
+				<div class="sideQuickContInner">
+					<h2>QUICK SERVICE</h2>
+					<input class="SQ_close" type="image" src="img/detail/sideQuick_close.png"/>
+					<div class="SQ_cont">
+						<a class="SQ_cont1" href="#" target="_blank" title="입학지원센터 새창열기"><img alt="2020-2학기 신.편입생 모집 | 2020.6.1(월) 예정" src="img/detail/sideQuick_bnr01_200225.png"/></a>
+						<a class="SQ_cont2" href="#" target="_blank" title="입학상담/자료 신청 새창열기"><img alt="입학문의 및 상담 | 1644-0982" src="img/detail/sideQuick_bnr02.png"/></a>
+						<ul class="SQ_cont3">
+							<li><a class="SQ_cont3-1" href="#" target="_blank" title="새창">입학상담 Q&A</a></li>
+							<li><a class="SQ_cont3-2" href="#" target="_blank" title="새창">입학상담 FAQ</a></li>
+						</ul>
+						<ul class="SQ_MN">
+							<li><a href="#" target="_self" title="">증명서발급</a></li>
+							<li><a href="#" target="_self" title="">장학안내</a></li>
+							<li><a href="#" target="_self" title="">스마트캠퍼스</a></li>
+							<li><a href="#" target="_self" title="">창업취업지원</a></li>
+							<li><a href="#" target="_self" title="">수업장애상담</a></li>
+							<li><a href="#" target="_self" title="">디지털도서관</a></li>
+							<li><a href="#" target="_self" title="">평생교육원</a></li>
+							<li><a href="#" target="_self" title="">심리상담센터</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		<section class="logInCont">
@@ -379,12 +404,26 @@
 					}
 				})
 
+				//sideQuick
+				$('.sideQuickBtn .QTop').on('click',function(){
+					$('html, body').animate({'scrollTop':'0'},500,'jswing');
+				})
+				$('.sideQuickBtn .QService').on('click',function(){
+
+				})
+
 				//footer QUICK LINK
 				function QL(){
 					var ww=$(window).width();
 					if(ww<1041){
 						$('.mob_f_go_btn').on('click',function(){
-							$('.f_go_cont').show();
+							if($(this).hasClass('onFG')){
+								$(this).removeClass('onFG');
+								$('.f_go_cont').hide();
+							}else{
+								$(this).addClass('onFG');
+								$('.f_go_cont').show();
+							}
 						})
 					}
 				}
