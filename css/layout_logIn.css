@@ -85,9 +85,9 @@ header .siteMenu{
 .topBar .homeBt, .topBar .top_func{
     position:absolute; top:21.5px; 
 }
-.homeBt{
-    left:30px;
-    font-size:15px;
+a.homeBt{
+    left:30px; display:block; width:30px; height:15px; padding-left:25px; line-height:15px;
+    background:url('../img/detail/snb_home_black.png') left no-repeat; font-size:18px; text-decoration:none; color:rgba(0,0,0,0.8); font-weight:100; letter-spacing:2px;
 }
 
 .topBar .top_func{

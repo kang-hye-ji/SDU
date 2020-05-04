@@ -2,14 +2,13 @@
 <html lang="ko">
 	<head>
 		<meta charset="utf-8"/>
-		<title>로그인</title>
+		<title>학번찾기</title>
 		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/logIn.css"/>
+		<link rel="stylesheet" type="text/css" href="css/searchID.css"/>
 		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css"/>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
@@ -144,52 +143,76 @@
 				</div>
 			</div>
 		</div>
-		<section class="logInCont">
-			<div class="logInContInner">
-				<h2>일반로그인</h2>
-				<form>
-					<fieldset>
-						<h3>범용인증서 로그인</h3>
-						<button type="button">인증서 로그인</button>
-						<div class="logFormBtn">
-							<a href="#" target="_blank" title="공인인증서 안내 팝업열기">공인인증센터</a>
-							<a href="#" target="_blank" title="공인인증서 안내 팝업열기">자주하는 질문</a>
-						</div>
-					</fieldset>
-					<fieldset>
-						<h3>지문인증 로그인</h3>
-						<div class="logIn2">
-							<input class="ID" type="text" placeholder="학번"/><br/>
-							<input class="log" type="submit" value="로그인"/><br/>
-							<input class="check" type="checkbox" name="IDsaved"/><label>학번저장</label>
-						</div>
-						<div class="logFormBtn">
-							<a href="#" target="_blank" title="지문인증 안내 팝업열기">지문인증센터</a>
-							<a href="#" target="_blank" title="지문인증 안내 팝업열기">자주하는 질문</a>
-						</div>
-					</fieldset>
-					<fieldset>
-						<h3>학번 로그인</h3>
-						<div class="logIn3">
-							<input class="ID" type="text" placeholder="학번"/>
-							<input class="PW" type="password" placeholder="비밀번호"/><br/>
-							<input class="log" type="submit" value="로그인"/><br/>
-							<input class="check1" type="checkbox" name="IDsaved"/><label>학번저장</label>
-							<input class="check2" type="checkbox" name="KBSec"/><label>키보드보안</label>
-						</div>
-						<div class="logFormBtn">
-							<a href="#" target="self" title="">학번찾기</a>
-							<a href="#" target="self" title="">비밀번호 찾기</a>
-						</div>
-					</fieldset>
-				</form>
-				<ul>
-					<li>강의실을 이용하기 위해서는 범용공인인증서 또는 지문인식 로그인 후 이용하실 수 있습니다. 학번으로 로그인을 하시면 강의를 제외한 서비스를 이용하실 수있습니다.</li>
-					<li>초기 비밀번호는 입학지원서 작성시 입력한 비밀번호입니다. 개인정보보호를 위해 초기 비밀번호로 로그인 후 [마이페이지 > 비밀번호변경] 메뉴에서 새 비밀번호로 변경하시기 바랍니다.</li>
-					<li>연합대(오프라인대학 학점교류)학생은 SDU연합대 홈페이지(http://union.sdu.ac.kr)에서 로그인과 학번 및 비밀번호 찾기가 가능합니다.</li>
-				</ul>
-			</div>
-		</section>
+		<section class="SIDCont">
+            <div class="SIDContInner">
+                <div class="SID_tit">
+                    <h2>학번찾기</h2>
+                    <div class="SIDtit_cont">
+                        <div class="SIDtit_text">
+                            <p>재입학생은 이전 학번을 그대로 사용합니다.</p>
+                            <p><span>문의전화</span> 02-2128-3189,3279</p>
+                        </div>
+                        <a href="#" title="" target="_self">연합대학 로그인 안내</a>
+                    </div>
+                </div>
+                <div class="SID_cont">
+                    <div class="SID_cont_btn">
+                        <button type="button">내국인</button>
+                        <button type="button">외국인</button>
+                        <div class="SID_cont_btn_bar"></div>
+                    </div>
+                    <ul class="SID_cont_ac">
+						<li>
+							<button type="button">휴대폰 인증</button>
+							<form class="SID_cont_acSub">
+								<filedset>
+									<label>성명</label><input class="name" type="text"/><br/>
+									<label>생년월일</label><input class="birthD" type="text"/><br/>
+									<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
+									<label>휴대폰번호</label>
+									<select>
+										<optgroup>
+											<option>선택</option>
+											<option>010</option>
+											<option>011</option>
+											<option>016</option>
+											<option>017</option>
+											<option>018</option>
+											<option>019</option>
+										</optgroup>
+									</select>
+									<label>-</label><input type="text"/>
+									<label>-</label><input type="text"/>
+									<button type="submit" value="확인"></button>
+								</filedset>
+							</form>
+						</li>
+						<li>
+							<button type="button">이메일 인증</button>
+							<form class="SID_cont_acSub">
+								<filedset>
+									<label>성명</label><input class="name" type="text"/><br/>
+									<label>생년월일</label><input class="birthD" type="text"/><br/>
+									<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
+									<label>이메일주소</label><input class="email" type="text"/>
+									<button type="submit" value="확인"></button>
+								</filedset>
+							</form>
+						</li>
+						<li>
+							<button type="button">공인인증서 인증</button>
+							<form class="SID_cont_acSub">
+								<filedset>
+									<label>성명</label><input class="name" type="text"/>
+									<button type="submit" value="공인인증서 로그인"></button>
+									<p>학교에서 등록되어 있는 범용공인인증서만 사용 가능합니다.</p>
+								</filedset>
+							</form>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </section>
 		<footer>
 			<article class="f_go">
 				<ul class="f_go_btn">
@@ -416,8 +439,14 @@
 					theme:"dark-thick"
 				});
 
+				//인증창 탭
+				$('.SID_cont_ac>li').eq(0).find('.SID_cont_acSub').show();
+				$('.SID_cont_ac>li>button').on('click',function(){
+					
+				})
+
 				//로그인 경고창
-				$('.logIn2 .log').on('click',function(){
+				/* $('.logIn2 .log').on('click',function(){
 					if($('.logIn2 .ID').val().trim()==''){
 						alert('아이디를 입력하셔야 합니다.');
 					}
@@ -430,7 +459,7 @@
 							alert('비밀번호를 입력해주세요.');
 						}
 					}
-				})
+				}) */
 
 				//footer QUICK LINK
 				function QL(){
