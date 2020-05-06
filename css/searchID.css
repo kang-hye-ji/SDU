@@ -40,7 +40,7 @@
 
 .SIDtit_cont>a{
     margin:37px 30px 0 0; float:right; display:block; width:188px; height:43px; line-height:43px; padding-left:20px;
-    background:url('../img/searchID/ico_arrLineR_black.png') right 15px center no-repeat; border:1px solid #000; font-size:15px; text-decoration:none;
+    color:#000; background:url('../img/searchID/ico_arrLineR_black.png') right 15px center no-repeat; border:1px solid #000; font-size:15px; text-decoration:none;
 }
 .SIDtit_cont>a:hover{
     color:#fff; background:url('../img/searchID/ico_arrLineR_white.png') right 15px center no-repeat #032f4f;
@@ -50,13 +50,21 @@
     height:50px; width:120px; text-align:center;
     font-size:20px; color:#666666; font-weight:550;
 }
+.SID_cont_btn>button.onSIDac_btn{
+    position:relative;
+    color:#05548f;
+}
+.SID_cont_btn>button.onSIDac_btn:after{
+    left:0; bottom:-4px; position:absolute; display:block; content:''; width:120px; height:4px;
+    background:#05548f;
+}
 .SID_cont_btn .SID_cont_btn_bar{
     width:100%; height:4px;
     background:#dbdfe2;
 }
 
 .SID_cont .SID_cont_ac{
-    *zoom:1;
+    *zoom:1; position:relative; height:500px;
 }
 .SID_cont .SID_cont_ac:after{
     clear:both; content:''; display:table;
@@ -65,9 +73,238 @@
     float:left;
 }
 .SID_cont .SID_cont_ac>li>button{
-    width:113px; height:48px;
-    background:#f4f4f4; font-size:16px; font-weight:540; letter-spacing:-1px;
+    height:48px; margin:30px 5px 30px 0; padding:0 15px;
+    background:#f4f4f4; font-size:16px; font-weight:540;
+}
+.SID_cont .SID_cont_ac>li>button.onSIDac{
+    background:#05548f; color:#fff; font-weight:550;
 }
 .SID_cont_ac .SID_cont_acSub{
-    display:none;
+    display:none; width:100%; padding:50px 0; position:absolute; left:0;
+    border:1px solid #dbdfe2;
+}
+.SID_cont_ac .SID_cont_acSub>fieldset{
+    display:block; width:790px; margin:0 auto; position:relative;
+    border:none;
+}
+.SID_cont_ac .SID_cont_acSub>fieldset input{
+    padding:0 10px; width:500px; height:40px;
+    font-size:16px; border:1px solid #dbdfe2;
+}
+.SID_cont_ac .SID_cont_acSub>fieldset label{
+    width:100px; display:inline-block;
+    font-size:16px; font-weight:600;
+}
+.SID_cont_ac .SID_cont_acSub>fieldset>div:nth-child(2){
+    margin-top:10px;
+}
+.SID_cont_ac .SID_cont_acSub>fieldset p{
+    padding:18px 0 30px 100px;
+    font-size:16px; color:#666666;
+}
+.SID_cont_ac .SID_cont_acSub button{
+    width:160px; height:94px; position:absolute; top:0; right:0;
+    background:#05548f; font-size:17px; color:#fff; font-weight:550; letter-spacing:5px;
+}
+
+.SID_cont_ac .SID_cont_acSub1>fieldset select{
+    height:40px; width:150px; padding-left:5px;
+    border:1px solid #dbdfe2; font-size:15px; color:#666666;
+}
+.SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) input{
+    width:155px; height:40px;
+}
+.SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(2),
+.SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(3){
+    width:25px; text-align:center;
+    font-weight:500; 
+}
+
+.SID_cont_ac .SID_cont_acSub3>fieldset button{
+    height:42px; letter-spacing:0;
+}
+
+
+.SID_cont .SID_cont_ac_foreign{
+    width:100%; padding:50px 0 30px; margin-top:35px;
+    border:1px solid #dbdfe2;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset{
+    display:block; width:790px; margin:0 auto; position:relative;
+    border:none;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset input{
+    padding:0 10px; width:500px; height:40px; 
+    font-size:16px; border:1px solid #dbdfe2;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset label{
+    width:100px; display:inline-block;
+    font-size:16px; font-weight:600;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset p{
+    padding:18px 0 30px 100px;
+    font-size:16px; color:#666666;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-child(2){
+    margin-top:10px;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div{
+    height:20px;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div label{
+    width:50px; height:20px; margin:0 0 0 5px; line-height:20px;
+    font-size:15px;
+}
+#gender_1, #gender_2{
+    width:20px; height:20px;
+    background:#fff; cursor:pointer;
+}
+
+.SID_cont .SID_cont_ac_foreign .foreign_bottom{
+    width:100%; position:relative; margin-top:30px; padding-top:40px; *zoom:1;
+}
+.SID_cont .SID_cont_ac_foreign .foreign_bottom:after{
+    top:0; display:block; content:''; width:100%; height:1px; position:absolute;
+    background:#dbdfe2;
+}
+.SID_cont .SID_cont_ac_foreign .foreign_bottom:before{
+    display:table; clear:both; content:'';
+}
+.SID_cont .SID_cont_ac_foreign .foreign_bottom span{
+    padding-left:22px; display:inline-block; height:17px; float:left;
+    background:url('../img/searchID/ico_cirExclam.png') no-repeat; font-size:16px; color:#666666;
+}
+.SID_cont .SID_cont_ac_foreign .foreign_bottom a{
+    letter-spacing:-1px; float:right; display:block; width:158px; height:43px; line-height:43px; padding-left:10px;
+    color:#000; background:url('../img/searchID/ico_arrLineR_black.png') right 9px center no-repeat; border:1px solid #000; font-size:15px; text-decoration:none;
+}
+.SID_cont .SID_cont_ac_foreign .foreign_bottom a:hover{
+    color:#fff; background:url('../img/searchID/ico_arrLineR_white.png') right 9px center no-repeat #032f4f;
+}
+
+.SID_cont .SID_cont_ac_foreign button{
+    width:160px; height:94px; position:absolute; top:0; right:0;
+    background:#05548f; font-size:17px; color:#fff; font-weight:550; letter-spacing:5px;
+}
+
+
+.SID_contact{
+    width:calc(100% - 100px); padding:50px 0 50px 100px;
+    background:#f1f2f7 url('../img/searchID/ico_receiver.png') left 30px center no-repeat;
+}
+.SID_contact>div{
+    display:inline-block; margin-right:40px; 
+}
+.SID_contact span{
+    display:inline-block; margin-right:15px; line-height:30px;
+    font-size:16px; font-weight:600;
+}
+.SID_contact a{
+    display:inline-block; line-height:30px;
+    text-decoration:none; color:#666666;
+}
+
+@media (max-width:1041px){
+    .SIDCont{
+        margin-top:241px;
+    }
+
+    .SIDtit_cont .SIDtit_text{
+        padding-left:120px;
+        background:url('../img/searchID/ico_find.png') no-repeat left 30px center; 
+    }
+
+    .SID_cont_ac .SID_cont_acSub{
+        padding:50px 10px; width:calc(100% - 20px);
+    }
+    .SID_cont_ac .SID_cont_acSub>fieldset{
+        width:calc(100% - 20px);
+    }
+    .SID_cont_ac .SID_cont_acSub>fieldset input{
+        width:calc(100% - 290px);
+    }
+
+    .SID_cont_ac .SID_cont_acSub1>fieldset select{
+        width:20%; padding-left:5px;
+    }
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) input{
+        width:20%; height:40px;
+    }
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(2),
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(3){
+        width:3%;
+    }
+
+
+    .SID_cont .SID_cont_ac_foreign{
+        width:calc(100% - 20px); padding:50px 10px 30px;
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset{
+        width:calc(100% - 20px);
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset input{
+        width:calc(100% - 290px);
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset label{
+        width:100px; display:inline-block;
+        font-size:16px; font-weight:600;
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset p{
+        padding:18px 0 30px 100px;
+        font-size:16px; color:#666666;
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset>div:nth-child(2){
+        margin-top:10px;
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div{
+        height:20px;
+    }
+    .SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div label{
+        width:50px; height:20px; margin:0 0 0 5px; line-height:20px;
+        font-size:15px;
+    }
+    #gender_1, #gender_2{
+        width:20px; height:20px;
+        background:#fff; cursor:pointer;
+    }
+}
+
+@media (max-width:768px){
+    .SIDCont{
+        margin-top:131px;
+    }
+    .SIDContInner{
+        padding:50px 15px 20px;
+    }
+
+    .SIDtit_cont .SIDtit_text{
+        padding-left:10px;
+        background:none; 
+    }
+    .SIDtit_cont .SIDtit_text p{
+        font-size:13px;
+    }
+    .SIDtit_cont>a{
+        margin:37px 10px 0 0;  width:158px; height:43px; line-height:43px; padding-left:15px;
+        background:url('../img/searchID/ico_arrLineR_black.png') right 12px center no-repeat; font-size:13px;
+    }
+
+    .SID_cont_ac .SID_cont_acSub1>fieldset select{
+        width:20%; padding-left:0;
+    }
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) input{
+        width:18%; height:40px;
+    }
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(2),
+    .SID_cont_ac .SID_cont_acSub1>fieldset>div:nth-of-type(3) label:nth-of-type(3){
+        width:3%;
+    }
+
+    .SID_cont .SID_cont_ac_foreign .foreign_bottom span{
+        padding-left:22px; display:inline-block; height:17px;
+        background:url('../img/searchID/ico_cirExclam.png') no-repeat; font-size:15px;
+    }
+    .SID_cont .SID_cont_ac_foreign .foreign_bottom a{
+        display:block; margin-top:20px;
+    }
 }
