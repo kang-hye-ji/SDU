@@ -166,29 +166,35 @@
 							<button type="button">휴대폰 인증</button>
 							<form class="SID_cont_acSub SID_cont_acSub1">
 								<fieldset>
-									<div>
-										<label>성명</label><input class="name" type="text"/>
-									</div>
-									<div>
-										<label>생년월일</label><input class="birthD" type="text"/>
-									</div>
-									<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
-									<div>
-										<label>휴대폰번호</label>
-										<select>
-											<optgroup>
-												<option>선택</option>
-												<option>010</option>
-												<option>011</option>
-												<option>016</option>
-												<option>017</option>
-												<option>018</option>
-												<option>019</option>
-											</optgroup>
-										</select>
-										<label>-</label><input class="phone" type="text"/>
-										<label>-</label><input class="phone" type="text"/>
-									</div>
+									<dl>
+										<dt>성명</dt>
+										<dd><input class="name" type="text"/></dd>
+									</dl>
+									<dl>
+										<dt>생년월일</dt>
+										<dd>
+											<input class="birthD" type="text"/>
+											<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>휴대폰번호</dt>
+										<dd>
+											<select>
+												<optgroup>
+													<option>선택</option>
+													<option>010</option>
+													<option>011</option>
+													<option>016</option>
+													<option>017</option>
+													<option>018</option>
+													<option>019</option>
+												</optgroup>
+											</select>
+											<span>-</span><input class="phone" type="text"/>
+											<span>-</span><input class="phone" type="text"/>
+										</dd>
+									</dl>
 									<button type="submit">확인</button>
 								</fieldset>
 							</form>
@@ -197,14 +203,25 @@
 							<button type="button">이메일 인증</button>
 							<form class="SID_cont_acSub SID_cont_acSub2">
 								<fieldset>
-									<div>
-										<label>성명</label><input class="name" type="text"/>
-									</div>
-									<div>
-										<label>생년월일</label><input class="birthD" type="text"/>
-									</div>
-									<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
-									<label>이메일주소</label><input class="email" type="text"/>
+									<dl>
+										<dt>성명</dt>
+										<dd>
+											<input class="name" type="text"/>
+										</dd>
+									</dl>
+									<dl>
+										<dt>생년월일</dt>
+										<dd>
+											<input class="birthD" type="text"/>
+											<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>이메일주소</dt>
+										<dd>
+											<input class="email" type="text"/>
+										</dd>
+									</dl>
 									<button type="submit">확인</button>
 								</fieldset>
 							</form>
@@ -213,31 +230,46 @@
 							<button type="button">공인인증서 인증</button>
 							<form class="SID_cont_acSub SID_cont_acSub3">
 								<fieldset>
-									<label>성명</label><input class="name" type="text"/>
+									<dl>
+										<dt>성명</dt>
+										<dd>
+											<input class="name" type="text"/>
+											<p>학교에서 등록되어 있는 범용공인인증서만 사용 가능합니다.</p>
+										</dd>
+									</dl>
 									<button type="submit">공인인증서 로그인</button>
-									<p>학교에서 등록되어 있는 범용공인인증서만 사용 가능합니다.</p>
 								</fieldset>
 							</form>
 						</li>
 					</ul>
 					<form class="SID_cont_ac_foreign">
 						<fieldset>
-							<div>
-								<label>성명</label><input class="name" type="text"/>
-							</div>
-							<div>
-								<label>생년월일</label><input class="birthD" type="text"/>
-							</div>
-							<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
-							<div>
-								<label>성별</label>
-								<div style="display:inline-block">
-									<input id="gender_1" type="radio" name="gender" value="male"/><label>남성</label>
-								</div>
-								<div style="display:inline-block">
-									<input id="gender_2" type="radio" name="gender" value="female"/><label>여성</label>
-								</div>
-							</div>
+							<dl>
+								<dt>성명</dt>
+								<dd>
+									<input class="name" type="text"/>
+								</dd>
+							</dl>
+							<dl>
+								<dt>생년월일</dt>
+								<dd>
+									<input class="birthD" type="text"/>
+									<p>생년월일은 년월일 19931001 형태로 입력해 주시기 바랍니다.</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt>성별</dt>
+								<dd>
+									<ol>
+										<li style="display:inline-block">
+											<input id="gender_1" type="radio" name="gender" value="male"/><label>남성</label>
+										</li>
+										<li style="display:inline-block">
+											<input id="gender_2" type="radio" name="gender" value="female"/><label>여성</label>
+										</li>
+									</ol>
+								</dd>
+							</dl>
 							<button type="button">확인</button>
 							<div class="foreign_bottom">
 								<span>비밀번호를 잊은 분은 임시비밀번호 발급을 이용하세요.</span>
