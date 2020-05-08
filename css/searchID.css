@@ -138,31 +138,53 @@
     display:block; width:790px; margin:0 auto; position:relative;
     border:none;
 }
+.SID_cont .SID_cont_ac_foreign>fieldset dt{
+    width:100px; display:inline-block; line-height:42px;
+    font-size:16px; font-weight:600;
+}
+.SID_cont .SID_cont_ac_foreign>fieldset dd{
+    display:inline-block;
+}
 .SID_cont .SID_cont_ac_foreign>fieldset input{
     padding:0 10px; width:500px; height:40px; 
     font-size:16px; border:1px solid #dbdfe2;
-}
-.SID_cont .SID_cont_ac_foreign>fieldset label{
-    width:100px; display:inline-block;
-    font-size:16px; font-weight:600;
 }
 .SID_cont .SID_cont_ac_foreign>fieldset p{
     padding:18px 0 30px 100px;
     font-size:16px; color:#666666;
 }
-.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-child(2){
+.SID_cont .SID_cont_ac_foreign>fieldset>dl:nth-child(2){
     margin-top:10px;
 }
-.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div{
+/* .SID_cont .SID_cont_ac_foreign>fieldset>dl:nth-of-type(3) ol>li{
     height:20px;
 }
-.SID_cont .SID_cont_ac_foreign>fieldset>div:nth-of-type(3)>div label{
+.SID_cont .SID_cont_ac_foreign>fieldset>dl:nth-of-type(3) ol>li label{
     width:50px; height:20px; margin:0 0 0 5px; line-height:20px;
     font-size:15px;
 }
 #gender_1, #gender_2{
     width:20px; height:20px;
     background:#fff; cursor:pointer;
+} */
+.SID_cont .SID_cont_ac_foreign>fieldset dl:nth-child(3) ol>li{
+    position:relative; overflow:hidden; width:80px; height:20px; margin-top:11px;
+}
+.SID_cont_ac_foreign dl:nth-child(3) ol>li input[type="radio"]{
+    position:absolute; left:-20px; width:1px; height:1px;
+}
+.SID_cont_ac_foreign dl:nth-child(3) ol>li input[type="radio"] + label{
+    position:relative; cursor:pointer; width:80px; height:20px; display:inline-block;
+}
+.SID_cont_ac_foreign dl:nth-child(3) ol>li input[type="radio"] + label:after{
+    left:0; content:''; display:block; position:absolute; width:20px; height:20px;
+    background:url('../img/searchID/ico_inputRadio.png') no-repeat;
+}
+.SID_cont_ac_foreign dl:nth-child(3) ol>li input[type="radio"]:checked + label:after{
+    background:url('../img/searchID/ico_inputRadio_on.png') no-repeat;
+}
+.SID_cont_ac_foreign dl:nth-child(3) ol>li input[type="radio"] + label span{
+    position:absolute; display:inline-block; right:10px; height:20px; line-height:20px; width:40px;
 }
 
 .SID_cont .SID_cont_ac_foreign .foreign_bottom{
