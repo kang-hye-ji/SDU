@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/searchID.css"/>
 		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css"/>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
@@ -466,6 +467,28 @@
 		<script type="text/javascript" src="js/layout_script.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				
+				mobHeader();
+				QL();
+				$(window).resize(function(){
+					mobHeader();
+					QL();
+				})
+				//footer QUICK LINK
+				function QL(){
+					var ww=$(window).width();
+					if(ww<1041){
+						$('.mob_f_go_btn').on('click',function(){
+							if($(this).hasClass('onFG')){
+								$(this).removeClass('onFG');
+								$('.f_go_cont').hide();
+							}else{
+								$(this).addClass('onFG');
+								$('.f_go_cont').show();
+							}
+						})
+					}
+				}
 				//모바일 로고, 햄버거메뉴
 				function mobHeader(){
 					var ww=$(window).width();
@@ -477,10 +500,7 @@
 						$('.siteMenu>img').attr('src','img/main/siteMenu_white.png');
 					}
 				}
-				$(window).resize(function(){
-					mobHeader();
-				})
-				mobHeader();
+				
 
 				//topBar 스크롤이벤트
 				$(window).scroll(function(){
@@ -516,7 +536,6 @@
 					theme:"dark-thick"
 				});
 
-
 				//내국인 외국인 탭
 				$('.SID_cont .SID_cont_btn button').eq(0).addClass('onSIDac_btn');
 				$('.SID_cont_ac_foreign').hide();
@@ -545,12 +564,15 @@
 				$('.SID_cont_acSub1 button').on('click',function(){
 					if($('.SID_cont_acSub1 .name').val().trim()==''){
 						alert('이름을 입력하셔야 합니다.');
+						return false;
 					}else{
 						if($('.SID_cont_acSub1 .birthD').val().trim()==''){
 							alert('생년월일을 입력하셔야 합니다.');
+							return false;
 						}else{
 							if($('.SID_cont_acSub1 .phone').val().trim()==''){
 								alert('핸드폰 번호를 입력하셔야 합니다.');
+								return false;
 							}
 						}
 					}
@@ -558,12 +580,15 @@
 				$('.SID_cont_acSub2 button').on('click',function(){
 					if($('.SID_cont_acSub2 .name').val().trim()==''){
 						alert('이름을 입력하셔야 합니다.');
+						return false;
 					}else{
 						if($('.SID_cont_acSub2 .birthD').val().trim()==''){
 							alert('생년월일을 입력하셔야 합니다.');
+							return false;
 						}else{
 							if($('.SID_cont_acSub2 .email').val().trim()==''){
 								alert('이메일 주소를 입력하셔야 합니다.');
+								return false;
 							}
 						}
 					}
@@ -571,39 +596,21 @@
 				$('.SID_cont_acSub3 button').on('click',function(){
 					if($('.SID_cont_acSub3 .name').val().trim()==''){
 						alert('이름을 입력하셔야 합니다.');
+						return false;
 					}
 				})
 				//외국인 경고창
 				$('.SID_cont_ac_foreign button').on('click',function(){
 					if($('.SID_cont_ac_foreign .name').val().trim()==''){
 						alert('이름을 입력하셔야 합니다.');
+						return false;
 					}else{
 						if($('.SID_cont_ac_foreign .birthD').val().trim()==''){
 							alert('생년월일을 입력하셔야 합니다.');
+							return false;
 						}
 					}
 				})
-
-
-				//footer QUICK LINK
-				function QL(){
-					var ww=$(window).width();
-					if(ww<1041){
-						$('.mob_f_go_btn').on('click',function(){
-							if($(this).hasClass('onFG')){
-								$(this).removeClass('onFG');
-								$('.f_go_cont').hide();
-							}else{
-								$(this).addClass('onFG');
-								$('.f_go_cont').show();
-							}
-						})
-					}
-				}
-				$(window).resize(function(){
-					QL();
-				})
-				QL();
 			})
 		</script>
 	</body>

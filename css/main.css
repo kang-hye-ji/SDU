@@ -800,8 +800,8 @@ article.m_visual .m_visualSl_cont1>a strong{
     background:#000; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;
 }
 .m_explore_cont>li>button{
-    display:block; position:relative;
-    font-size:26px; color:#8d8d8d; font-weight:700;
+    display:block; position:relative; overflow:visible;
+    font-size:26px; color:#8d8d8d; font-weight:700; height:34px;
 }
 .m_explore_cont>li>button.onE{
     color:#977749;
