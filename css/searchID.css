@@ -47,12 +47,12 @@
 
 
 .SID_cont_btn>button{
-    height:50px; width:120px; text-align:center;
+    height:50px; width:120px; text-align:center; overflow:visible;
     font-size:20px; color:#666666; font-weight:550;
 }
 .SID_cont_btn>button.onSIDac_btn{
     position:relative;
-    color:#05548f;
+    color:#05548f; font-weight:700;
 }
 .SID_cont_btn>button.onSIDac_btn:after{
     left:0; bottom:-4px; position:absolute; display:block; content:''; width:120px; height:4px;
